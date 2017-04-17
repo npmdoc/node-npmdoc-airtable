@@ -1,0 +1,5298 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/airtable/airtable.js">airtable (v0.4.5)</a>
+</h1>
+<h4>The official Airtable JavaScript library.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable">module airtable</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.airtable">
+            function <span class="apidocSignatureSpan"></span>airtable
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Base">
+            function <span class="apidocSignatureSpan">airtable.</span>Base
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Base.createFunctor">
+            function <span class="apidocSignatureSpan">airtable.</span>Base.createFunctor
+            <span class="apidocSignatureSpan">(airtable, baseId)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Base.prototype._checkStatusForError">
+            function <span class="apidocSignatureSpan">airtable.</span>Base.prototype._checkStatusForError
+            <span class="apidocSignatureSpan">(statusCode, body)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Base.prototype.doCall">
+            function <span class="apidocSignatureSpan">airtable.</span>Base.prototype.doCall
+            <span class="apidocSignatureSpan">(tableName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Base.prototype.getId">
+            function <span class="apidocSignatureSpan">airtable.</span>Base.prototype.getId
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Base.prototype.init">
+            function <span class="apidocSignatureSpan">airtable.</span>Base.prototype.init
+            <span class="apidocSignatureSpan">(airtable, baseId)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Base.prototype.runAction">
+            function <span class="apidocSignatureSpan">airtable.</span>Base.prototype.runAction
+            <span class="apidocSignatureSpan">(method, path, queryParams, bodyData, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Base.prototype.table">
+            function <span class="apidocSignatureSpan">airtable.</span>Base.prototype.table
+            <span class="apidocSignatureSpan">(tableName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Record">
+            function <span class="apidocSignatureSpan">airtable.</span>Record
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Record.prototype.destroy">
+            function <span class="apidocSignatureSpan">airtable.</span>Record.prototype.destroy
+            <span class="apidocSignatureSpan">(done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Record.prototype.fetch">
+            function <span class="apidocSignatureSpan">airtable.</span>Record.prototype.fetch
+            <span class="apidocSignatureSpan">(done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Record.prototype.get">
+            function <span class="apidocSignatureSpan">airtable.</span>Record.prototype.get
+            <span class="apidocSignatureSpan">(columnName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Record.prototype.getId">
+            function <span class="apidocSignatureSpan">airtable.</span>Record.prototype.getId
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Record.prototype.init">
+            function <span class="apidocSignatureSpan">airtable.</span>Record.prototype.init
+            <span class="apidocSignatureSpan">(table, recordId, recordJson)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Record.prototype.patchUpdate">
+            function <span class="apidocSignatureSpan">airtable.</span>Record.prototype.patchUpdate
+            <span class="apidocSignatureSpan">(cellValuesByName, opts, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Record.prototype.putUpdate">
+            function <span class="apidocSignatureSpan">airtable.</span>Record.prototype.putUpdate
+            <span class="apidocSignatureSpan">(cellValuesByName, opts, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Record.prototype.save">
+            function <span class="apidocSignatureSpan">airtable.</span>Record.prototype.save
+            <span class="apidocSignatureSpan">(done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Record.prototype.set">
+            function <span class="apidocSignatureSpan">airtable.</span>Record.prototype.set
+            <span class="apidocSignatureSpan">(columnName, columnValue)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Record.prototype.setRawJson">
+            function <span class="apidocSignatureSpan">airtable.</span>Record.prototype.setRawJson
+            <span class="apidocSignatureSpan">(rawJson)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Table">
+            function <span class="apidocSignatureSpan">airtable.</span>Table
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Table.prototype._createRecord">
+            function <span class="apidocSignatureSpan">airtable.</span>Table.prototype._createRecord
+            <span class="apidocSignatureSpan">(recordData, optionalParameters, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Table.prototype._destroyRecord">
+            function <span class="apidocSignatureSpan">airtable.</span>Table.prototype._destroyRecord
+            <span class="apidocSignatureSpan">(recordId, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Table.prototype._findRecordById">
+            function <span class="apidocSignatureSpan">airtable.</span>Table.prototype._findRecordById
+            <span class="apidocSignatureSpan">(recordId, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Table.prototype._forEachRecord">
+            function <span class="apidocSignatureSpan">airtable.</span>Table.prototype._forEachRecord
+            <span class="apidocSignatureSpan">(opts, callback, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Table.prototype._listRecords">
+            function <span class="apidocSignatureSpan">airtable.</span>Table.prototype._listRecords
+            <span class="apidocSignatureSpan">(limit, offset, opts, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Table.prototype._replaceRecord">
+            function <span class="apidocSignatureSpan">airtable.</span>Table.prototype._replaceRecord
+            <span class="apidocSignatureSpan">(recordId, recordData, opts, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Table.prototype._selectRecords">
+            function <span class="apidocSignatureSpan">airtable.</span>Table.prototype._selectRecords
+            <span class="apidocSignatureSpan">(params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Table.prototype._updateRecord">
+            function <span class="apidocSignatureSpan">airtable.</span>Table.prototype._updateRecord
+            <span class="apidocSignatureSpan">(recordId, recordData, opts, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Table.prototype._urlEncodedNameOrId">
+            function <span class="apidocSignatureSpan">airtable.</span>Table.prototype._urlEncodedNameOrId
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Table.prototype.init">
+            function <span class="apidocSignatureSpan">airtable.</span>Table.prototype.init
+            <span class="apidocSignatureSpan">(base, tableId, tableName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.airtable_error">
+            function <span class="apidocSignatureSpan">airtable.</span>airtable_error
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.base">
+            function <span class="apidocSignatureSpan">airtable.</span>base
+            <span class="apidocSignatureSpan">(baseId)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.class">
+            function <span class="apidocSignatureSpan">airtable.</span>class
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.configure">
+            function <span class="apidocSignatureSpan">airtable.</span>configure
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.deprecate">
+            function <span class="apidocSignatureSpan">airtable.</span>deprecate
+            <span class="apidocSignatureSpan">(fn, key, message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.extend">
+            function <span class="apidocSignatureSpan">airtable.</span>extend
+            <span class="apidocSignatureSpan">(prop)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.gruntfile">
+            function <span class="apidocSignatureSpan">airtable.</span>gruntfile
+            <span class="apidocSignatureSpan">(grunt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.object_to_query_param_string">
+            function <span class="apidocSignatureSpan">airtable.</span>object_to_query_param_string
+            <span class="apidocSignatureSpan">(obj)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.query">
+            function <span class="apidocSignatureSpan">airtable.</span>query
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.run_action">
+            function <span class="apidocSignatureSpan">airtable.</span>run_action
+            <span class="apidocSignatureSpan">(base, method, path, queryParams, bodyData, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.toString">
+            function <span class="apidocSignatureSpan">airtable.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.typecheck">
+            function <span class="apidocSignatureSpan">airtable.</span>typecheck
+            <span class="apidocSignatureSpan">(fn, error)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">airtable.</span>Base.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">airtable.</span>Record.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">airtable.</span>Table.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">airtable.</span>airtable_error.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">airtable.</span>default_config</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">airtable.</span>query.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.Base">module airtable.Base</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Base.Base">
+            function <span class="apidocSignatureSpan">airtable.</span>Base
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Base.createFunctor">
+            function <span class="apidocSignatureSpan">airtable.Base.</span>createFunctor
+            <span class="apidocSignatureSpan">(airtable, baseId)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Base.extend">
+            function <span class="apidocSignatureSpan">airtable.Base.</span>extend
+            <span class="apidocSignatureSpan">(prop)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.Base.createFunctor">module airtable.Base.createFunctor</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Base.createFunctor.createFunctor">
+            function <span class="apidocSignatureSpan">airtable.Base.</span>createFunctor
+            <span class="apidocSignatureSpan">(airtable, baseId)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.Base.prototype">module airtable.Base.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Base.prototype._checkStatusForError">
+            function <span class="apidocSignatureSpan">airtable.Base.prototype.</span>_checkStatusForError
+            <span class="apidocSignatureSpan">(statusCode, body)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Base.prototype.constructor">
+            function <span class="apidocSignatureSpan">airtable.Base.prototype.</span>constructor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Base.prototype.doCall">
+            function <span class="apidocSignatureSpan">airtable.Base.prototype.</span>doCall
+            <span class="apidocSignatureSpan">(tableName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Base.prototype.getId">
+            function <span class="apidocSignatureSpan">airtable.Base.prototype.</span>getId
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Base.prototype.init">
+            function <span class="apidocSignatureSpan">airtable.Base.prototype.</span>init
+            <span class="apidocSignatureSpan">(airtable, baseId)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Base.prototype.runAction">
+            function <span class="apidocSignatureSpan">airtable.Base.prototype.</span>runAction
+            <span class="apidocSignatureSpan">(method, path, queryParams, bodyData, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Base.prototype.table">
+            function <span class="apidocSignatureSpan">airtable.Base.prototype.</span>table
+            <span class="apidocSignatureSpan">(tableName)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.Base.prototype._checkStatusForError">module airtable.Base.prototype._checkStatusForError</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Base.prototype._checkStatusForError._checkStatusForError">
+            function <span class="apidocSignatureSpan">airtable.Base.prototype.</span>_checkStatusForError
+            <span class="apidocSignatureSpan">(statusCode, body)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.Base.prototype.doCall">module airtable.Base.prototype.doCall</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Base.prototype.doCall.doCall">
+            function <span class="apidocSignatureSpan">airtable.Base.prototype.</span>doCall
+            <span class="apidocSignatureSpan">(tableName)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.Base.prototype.getId">module airtable.Base.prototype.getId</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Base.prototype.getId.getId">
+            function <span class="apidocSignatureSpan">airtable.Base.prototype.</span>getId
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.Base.prototype.init">module airtable.Base.prototype.init</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Base.prototype.init.init">
+            function <span class="apidocSignatureSpan">airtable.Base.prototype.</span>init
+            <span class="apidocSignatureSpan">(airtable, baseId)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.Base.prototype.runAction">module airtable.Base.prototype.runAction</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Base.prototype.runAction.runAction">
+            function <span class="apidocSignatureSpan">airtable.Base.prototype.</span>runAction
+            <span class="apidocSignatureSpan">(method, path, queryParams, bodyData, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.Base.prototype.table">module airtable.Base.prototype.table</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Base.prototype.table.table">
+            function <span class="apidocSignatureSpan">airtable.Base.prototype.</span>table
+            <span class="apidocSignatureSpan">(tableName)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.Record">module airtable.Record</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Record.Record">
+            function <span class="apidocSignatureSpan">airtable.</span>Record
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Record.extend">
+            function <span class="apidocSignatureSpan">airtable.Record.</span>extend
+            <span class="apidocSignatureSpan">(prop)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.Record.prototype">module airtable.Record.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Record.prototype.constructor">
+            function <span class="apidocSignatureSpan">airtable.Record.prototype.</span>constructor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Record.prototype.destroy">
+            function <span class="apidocSignatureSpan">airtable.Record.prototype.</span>destroy
+            <span class="apidocSignatureSpan">(done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Record.prototype.fetch">
+            function <span class="apidocSignatureSpan">airtable.Record.prototype.</span>fetch
+            <span class="apidocSignatureSpan">(done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Record.prototype.get">
+            function <span class="apidocSignatureSpan">airtable.Record.prototype.</span>get
+            <span class="apidocSignatureSpan">(columnName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Record.prototype.getId">
+            function <span class="apidocSignatureSpan">airtable.Record.prototype.</span>getId
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Record.prototype.init">
+            function <span class="apidocSignatureSpan">airtable.Record.prototype.</span>init
+            <span class="apidocSignatureSpan">(table, recordId, recordJson)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Record.prototype.patchUpdate">
+            function <span class="apidocSignatureSpan">airtable.Record.prototype.</span>patchUpdate
+            <span class="apidocSignatureSpan">(cellValuesByName, opts, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Record.prototype.putUpdate">
+            function <span class="apidocSignatureSpan">airtable.Record.prototype.</span>putUpdate
+            <span class="apidocSignatureSpan">(cellValuesByName, opts, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Record.prototype.save">
+            function <span class="apidocSignatureSpan">airtable.Record.prototype.</span>save
+            <span class="apidocSignatureSpan">(done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Record.prototype.set">
+            function <span class="apidocSignatureSpan">airtable.Record.prototype.</span>set
+            <span class="apidocSignatureSpan">(columnName, columnValue)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Record.prototype.setRawJson">
+            function <span class="apidocSignatureSpan">airtable.Record.prototype.</span>setRawJson
+            <span class="apidocSignatureSpan">(rawJson)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.Record.prototype.destroy">module airtable.Record.prototype.destroy</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Record.prototype.destroy.destroy">
+            function <span class="apidocSignatureSpan">airtable.Record.prototype.</span>destroy
+            <span class="apidocSignatureSpan">(done)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.Record.prototype.fetch">module airtable.Record.prototype.fetch</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Record.prototype.fetch.fetch">
+            function <span class="apidocSignatureSpan">airtable.Record.prototype.</span>fetch
+            <span class="apidocSignatureSpan">(done)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.Record.prototype.get">module airtable.Record.prototype.get</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Record.prototype.get.get">
+            function <span class="apidocSignatureSpan">airtable.Record.prototype.</span>get
+            <span class="apidocSignatureSpan">(columnName)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.Record.prototype.getId">module airtable.Record.prototype.getId</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Record.prototype.getId.getId">
+            function <span class="apidocSignatureSpan">airtable.Record.prototype.</span>getId
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.Record.prototype.init">module airtable.Record.prototype.init</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Record.prototype.init.init">
+            function <span class="apidocSignatureSpan">airtable.Record.prototype.</span>init
+            <span class="apidocSignatureSpan">(table, recordId, recordJson)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.Record.prototype.patchUpdate">module airtable.Record.prototype.patchUpdate</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Record.prototype.patchUpdate.patchUpdate">
+            function <span class="apidocSignatureSpan">airtable.Record.prototype.</span>patchUpdate
+            <span class="apidocSignatureSpan">(cellValuesByName, opts, done)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.Record.prototype.putUpdate">module airtable.Record.prototype.putUpdate</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Record.prototype.putUpdate.putUpdate">
+            function <span class="apidocSignatureSpan">airtable.Record.prototype.</span>putUpdate
+            <span class="apidocSignatureSpan">(cellValuesByName, opts, done)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.Record.prototype.save">module airtable.Record.prototype.save</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Record.prototype.save.save">
+            function <span class="apidocSignatureSpan">airtable.Record.prototype.</span>save
+            <span class="apidocSignatureSpan">(done)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.Record.prototype.set">module airtable.Record.prototype.set</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Record.prototype.set.set">
+            function <span class="apidocSignatureSpan">airtable.Record.prototype.</span>set
+            <span class="apidocSignatureSpan">(columnName, columnValue)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.Record.prototype.setRawJson">module airtable.Record.prototype.setRawJson</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Record.prototype.setRawJson.setRawJson">
+            function <span class="apidocSignatureSpan">airtable.Record.prototype.</span>setRawJson
+            <span class="apidocSignatureSpan">(rawJson)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.Table">module airtable.Table</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Table.Table">
+            function <span class="apidocSignatureSpan">airtable.</span>Table
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Table.extend">
+            function <span class="apidocSignatureSpan">airtable.Table.</span>extend
+            <span class="apidocSignatureSpan">(prop)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.Table.prototype">module airtable.Table.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Table.prototype._createRecord">
+            function <span class="apidocSignatureSpan">airtable.Table.prototype.</span>_createRecord
+            <span class="apidocSignatureSpan">(recordData, optionalParameters, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Table.prototype._destroyRecord">
+            function <span class="apidocSignatureSpan">airtable.Table.prototype.</span>_destroyRecord
+            <span class="apidocSignatureSpan">(recordId, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Table.prototype._findRecordById">
+            function <span class="apidocSignatureSpan">airtable.Table.prototype.</span>_findRecordById
+            <span class="apidocSignatureSpan">(recordId, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Table.prototype._forEachRecord">
+            function <span class="apidocSignatureSpan">airtable.Table.prototype.</span>_forEachRecord
+            <span class="apidocSignatureSpan">(opts, callback, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Table.prototype._listRecords">
+            function <span class="apidocSignatureSpan">airtable.Table.prototype.</span>_listRecords
+            <span class="apidocSignatureSpan">(limit, offset, opts, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Table.prototype._replaceRecord">
+            function <span class="apidocSignatureSpan">airtable.Table.prototype.</span>_replaceRecord
+            <span class="apidocSignatureSpan">(recordId, recordData, opts, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Table.prototype._selectRecords">
+            function <span class="apidocSignatureSpan">airtable.Table.prototype.</span>_selectRecords
+            <span class="apidocSignatureSpan">(params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Table.prototype._updateRecord">
+            function <span class="apidocSignatureSpan">airtable.Table.prototype.</span>_updateRecord
+            <span class="apidocSignatureSpan">(recordId, recordData, opts, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Table.prototype._urlEncodedNameOrId">
+            function <span class="apidocSignatureSpan">airtable.Table.prototype.</span>_urlEncodedNameOrId
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Table.prototype.constructor">
+            function <span class="apidocSignatureSpan">airtable.Table.prototype.</span>constructor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Table.prototype.init">
+            function <span class="apidocSignatureSpan">airtable.Table.prototype.</span>init
+            <span class="apidocSignatureSpan">(base, tableId, tableName)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.Table.prototype._createRecord">module airtable.Table.prototype._createRecord</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Table.prototype._createRecord._createRecord">
+            function <span class="apidocSignatureSpan">airtable.Table.prototype.</span>_createRecord
+            <span class="apidocSignatureSpan">(recordData, optionalParameters, done)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.Table.prototype._destroyRecord">module airtable.Table.prototype._destroyRecord</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Table.prototype._destroyRecord._destroyRecord">
+            function <span class="apidocSignatureSpan">airtable.Table.prototype.</span>_destroyRecord
+            <span class="apidocSignatureSpan">(recordId, done)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.Table.prototype._findRecordById">module airtable.Table.prototype._findRecordById</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Table.prototype._findRecordById._findRecordById">
+            function <span class="apidocSignatureSpan">airtable.Table.prototype.</span>_findRecordById
+            <span class="apidocSignatureSpan">(recordId, done)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.Table.prototype._forEachRecord">module airtable.Table.prototype._forEachRecord</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Table.prototype._forEachRecord._forEachRecord">
+            function <span class="apidocSignatureSpan">airtable.Table.prototype.</span>_forEachRecord
+            <span class="apidocSignatureSpan">(opts, callback, done)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.Table.prototype._listRecords">module airtable.Table.prototype._listRecords</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Table.prototype._listRecords._listRecords">
+            function <span class="apidocSignatureSpan">airtable.Table.prototype.</span>_listRecords
+            <span class="apidocSignatureSpan">(limit, offset, opts, done)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.Table.prototype._replaceRecord">module airtable.Table.prototype._replaceRecord</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Table.prototype._replaceRecord._replaceRecord">
+            function <span class="apidocSignatureSpan">airtable.Table.prototype.</span>_replaceRecord
+            <span class="apidocSignatureSpan">(recordId, recordData, opts, done)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.Table.prototype._selectRecords">module airtable.Table.prototype._selectRecords</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Table.prototype._selectRecords._selectRecords">
+            function <span class="apidocSignatureSpan">airtable.Table.prototype.</span>_selectRecords
+            <span class="apidocSignatureSpan">(params)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.Table.prototype._updateRecord">module airtable.Table.prototype._updateRecord</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Table.prototype._updateRecord._updateRecord">
+            function <span class="apidocSignatureSpan">airtable.Table.prototype.</span>_updateRecord
+            <span class="apidocSignatureSpan">(recordId, recordData, opts, done)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.Table.prototype._urlEncodedNameOrId">module airtable.Table.prototype._urlEncodedNameOrId</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Table.prototype._urlEncodedNameOrId._urlEncodedNameOrId">
+            function <span class="apidocSignatureSpan">airtable.Table.prototype.</span>_urlEncodedNameOrId
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.Table.prototype.init">module airtable.Table.prototype.init</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.Table.prototype.init.init">
+            function <span class="apidocSignatureSpan">airtable.Table.prototype.</span>init
+            <span class="apidocSignatureSpan">(base, tableId, tableName)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.airtable_error">module airtable.airtable_error</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.airtable_error.airtable_error">
+            function <span class="apidocSignatureSpan">airtable.</span>airtable_error
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.airtable_error.extend">
+            function <span class="apidocSignatureSpan">airtable.airtable_error.</span>extend
+            <span class="apidocSignatureSpan">(prop)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.airtable_error.prototype">module airtable.airtable_error.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.airtable_error.prototype.constructor">
+            function <span class="apidocSignatureSpan">airtable.airtable_error.prototype.</span>constructor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.airtable_error.prototype.init">
+            function <span class="apidocSignatureSpan">airtable.airtable_error.prototype.</span>init
+            <span class="apidocSignatureSpan">(error, message, statusCode)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.airtable_error.prototype.toString">
+            function <span class="apidocSignatureSpan">airtable.airtable_error.prototype.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.base">module airtable.base</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.base.base">
+            function <span class="apidocSignatureSpan">airtable.</span>base
+            <span class="apidocSignatureSpan">(baseId)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.class">module airtable.class</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.class.class">
+            function <span class="apidocSignatureSpan">airtable.</span>class
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.class.extend">
+            function <span class="apidocSignatureSpan">airtable.class.</span>extend
+            <span class="apidocSignatureSpan">(prop)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.configure">module airtable.configure</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.configure.configure">
+            function <span class="apidocSignatureSpan">airtable.</span>configure
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.deprecate">module airtable.deprecate</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.deprecate.deprecate">
+            function <span class="apidocSignatureSpan">airtable.</span>deprecate
+            <span class="apidocSignatureSpan">(fn, key, message)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.extend">module airtable.extend</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.extend.extend">
+            function <span class="apidocSignatureSpan">airtable.</span>extend
+            <span class="apidocSignatureSpan">(prop)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.gruntfile">module airtable.gruntfile</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.gruntfile.gruntfile">
+            function <span class="apidocSignatureSpan">airtable.</span>gruntfile
+            <span class="apidocSignatureSpan">(grunt)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.object_to_query_param_string">module airtable.object_to_query_param_string</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.object_to_query_param_string.object_to_query_param_string">
+            function <span class="apidocSignatureSpan">airtable.</span>object_to_query_param_string
+            <span class="apidocSignatureSpan">(obj)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.query">module airtable.query</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.query.query">
+            function <span class="apidocSignatureSpan">airtable.</span>query
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.query.extend">
+            function <span class="apidocSignatureSpan">airtable.query.</span>extend
+            <span class="apidocSignatureSpan">(prop)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.query.validateParams">
+            function <span class="apidocSignatureSpan">airtable.query.</span>validateParams
+            <span class="apidocSignatureSpan">(params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">airtable.query.</span>paramValidators</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.query.prototype">module airtable.query.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.query.prototype.constructor">
+            function <span class="apidocSignatureSpan">airtable.query.prototype.</span>constructor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.query.prototype.eachPage">
+            function <span class="apidocSignatureSpan">airtable.query.prototype.</span>eachPage
+            <span class="apidocSignatureSpan">(pageCallback, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.query.prototype.firstPage">
+            function <span class="apidocSignatureSpan">airtable.query.prototype.</span>firstPage
+            <span class="apidocSignatureSpan">(done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.query.prototype.init">
+            function <span class="apidocSignatureSpan">airtable.query.prototype.</span>init
+            <span class="apidocSignatureSpan">(table, params)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.run_action">module airtable.run_action</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.run_action.run_action">
+            function <span class="apidocSignatureSpan">airtable.</span>run_action
+            <span class="apidocSignatureSpan">(base, method, path, queryParams, bodyData, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.toString">module airtable.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.toString.toString">
+            function <span class="apidocSignatureSpan">airtable.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airtable.typecheck">module airtable.typecheck</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.typecheck.typecheck">
+            function <span class="apidocSignatureSpan">airtable.</span>typecheck
+            <span class="apidocSignatureSpan">(fn, error)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.typecheck.isArrayOf">
+            function <span class="apidocSignatureSpan">airtable.typecheck.</span>isArrayOf
+            <span class="apidocSignatureSpan">(itemValidator)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airtable.typecheck.isOneOf">
+            function <span class="apidocSignatureSpan">airtable.typecheck.</span>isOneOf
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable" id="apidoc.module.airtable">module airtable</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.airtable" id="apidoc.element.airtable.airtable">
+        function <span class="apidocSignatureSpan"></span>airtable
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Class() {
+    // All construction is actually done in the init method
+    if ( !initializing &amp;&amp; this.init )
+        this.init.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Base" id="apidoc.element.airtable.Base">
+        function <span class="apidocSignatureSpan">airtable.</span>Base
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Class() {
+    // All construction is actually done in the init method
+    if ( !initializing &amp;&amp; this.init )
+        this.init.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Base.createFunctor" id="apidoc.element.airtable.Base.createFunctor">
+        function <span class="apidocSignatureSpan">airtable.</span>Base.createFunctor
+        <span class="apidocSignatureSpan">(airtable, baseId)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Base.createFunctor = function (airtable, baseId) {
+    var base = new Base(airtable, baseId);
+    var baseFn = function() {
+        return base.doCall.apply(base, arguments);
+    };
+    _.each(['table', 'runAction', 'getId'], function(baseMethod) {
+        baseFn[baseMethod] = base[baseMethod].bind(base);
+    });
+    baseFn._base = base;
+    baseFn.tables = base.tables;
+    return baseFn;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Base.prototype._checkStatusForError" id="apidoc.element.airtable.Base.prototype._checkStatusForError">
+        function <span class="apidocSignatureSpan">airtable.</span>Base.prototype._checkStatusForError
+        <span class="apidocSignatureSpan">(statusCode, body)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Base.prototype._checkStatusForError = function (statusCode, body) {
+    if (statusCode === 401) {
+        return new AirtableError('AUTHENTICATION_REQUIRED', 'You should provide valid api key to perform this operation', statusCode
+);
+    } else if (statusCode === 403) {
+        return new AirtableError('NOT_AUTHORIZED', 'You are not authorized to perform this operation', statusCode);
+    } else if (statusCode === 404) {
+        return (function(){
+            var message = (body &amp;&amp; body.error &amp;&amp; body.error.message) ? body.error.message : 'Could not find what you are looking
+ for';
+            return new AirtableError('NOT_FOUND', message, statusCode);
+        })();
+    } else if (statusCode === 413) {
+        return new AirtableError('REQUEST_TOO_LARGE', 'Request body is too large', statusCode);
+    } else if (statusCode === 422) {
+        return new AirtableError(body.error.type, body.error.message, statusCode);
+    } else if (statusCode === 429) {
+        return new AirtableError('TOO_MANY_REQUESTS', 'You have made too many requests in a short period of time. Please retry your
+ request later', statusCode);
+    }else if (statusCode === 500) {
+        return new AirtableError('SERVER_ERROR', 'Try again. If the problem persists, contact support.', statusCode);
+    } else if (statusCode === 503) {
+        return new AirtableError('SERVICE_UNAVAILABLE', 'The service is temporarily unavailable. Please retry shortly.', statusCode
+);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Base.prototype.doCall" id="apidoc.element.airtable.Base.prototype.doCall">
+        function <span class="apidocSignatureSpan">airtable.</span>Base.prototype.doCall
+        <span class="apidocSignatureSpan">(tableName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Base.prototype.doCall = function (tableName) {
+    return this.table(tableName);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Base.prototype.getId" id="apidoc.element.airtable.Base.prototype.getId">
+        function <span class="apidocSignatureSpan">airtable.</span>Base.prototype.getId
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Base.prototype.getId = function () {
+    return this._id;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Base.prototype.init" id="apidoc.element.airtable.Base.prototype.init">
+        function <span class="apidocSignatureSpan">airtable.</span>Base.prototype.init
+        <span class="apidocSignatureSpan">(airtable, baseId)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Base.prototype.init = function (airtable, baseId) {
+    this._airtable = airtable;
+    this._id = baseId;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Base.prototype.runAction" id="apidoc.element.airtable.Base.prototype.runAction">
+        function <span class="apidocSignatureSpan">airtable.</span>Base.prototype.runAction
+        <span class="apidocSignatureSpan">(method, path, queryParams, bodyData, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Base.prototype.runAction = function (method, path, queryParams, bodyData, callback) {
+    runAction(this, method, path, queryParams, bodyData, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Base.prototype.table" id="apidoc.element.airtable.Base.prototype.table">
+        function <span class="apidocSignatureSpan">airtable.</span>Base.prototype.table
+        <span class="apidocSignatureSpan">(tableName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Base.prototype.table = function (tableName) {
+    return new Table(this, null, tableName);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Record" id="apidoc.element.airtable.Record">
+        function <span class="apidocSignatureSpan">airtable.</span>Record
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Class() {
+    // All construction is actually done in the init method
+    if ( !initializing &amp;&amp; this.init )
+        this.init.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Record.prototype.destroy" id="apidoc.element.airtable.Record.prototype.destroy">
+        function <span class="apidocSignatureSpan">airtable.</span>Record.prototype.destroy
+        <span class="apidocSignatureSpan">(done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Record.prototype.destroy = function (done) {
+    var that = this;
+    this._table._base.runAction('delete', '/' + this._table._urlEncodedNameOrId() + '/' + this.id, {}, {}, function(err, response
+, results) {
+        if (err) { done(err); return; }
+
+        done(null, that);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Record.prototype.fetch" id="apidoc.element.airtable.Record.prototype.fetch">
+        function <span class="apidocSignatureSpan">airtable.</span>Record.prototype.fetch
+        <span class="apidocSignatureSpan">(done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Record.prototype.fetch = function (done) {
+    var that = this;
+    this._table._base.runAction('get', '/' + this._table._urlEncodedNameOrId() + '/' + this.id, {}, {}, function(err, response,
+results) {
+        if (err) { done(err); return; }
+
+        that.setRawJson(results);
+        done(null, that);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Record.prototype.get" id="apidoc.element.airtable.Record.prototype.get">
+        function <span class="apidocSignatureSpan">airtable.</span>Record.prototype.get
+        <span class="apidocSignatureSpan">(columnName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Record.prototype.get = function (columnName) {
+    return this.fields[columnName];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Record.prototype.getId" id="apidoc.element.airtable.Record.prototype.getId">
+        function <span class="apidocSignatureSpan">airtable.</span>Record.prototype.getId
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Record.prototype.getId = function () {
+    return this.id;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Record.prototype.init" id="apidoc.element.airtable.Record.prototype.init">
+        function <span class="apidocSignatureSpan">airtable.</span>Record.prototype.init
+        <span class="apidocSignatureSpan">(table, recordId, recordJson)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Record.prototype.init = function (table, recordId, recordJson) {
+    this._table = table;
+    this.id = recordId || recordJson.id;
+    this.setRawJson(recordJson);
+    this.updateFields = this.patchUpdate;
+    this.replaceFields = this.putUpdate;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Record.prototype.patchUpdate" id="apidoc.element.airtable.Record.prototype.patchUpdate">
+        function <span class="apidocSignatureSpan">airtable.</span>Record.prototype.patchUpdate
+        <span class="apidocSignatureSpan">(cellValuesByName, opts, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Record.prototype.patchUpdate = function (cellValuesByName, opts, done) {
+    var that = this;
+    if (!done) {
+        done = opts;
+        opts = {};
+    }
+    var updateBody = _.extend({
+        fields: cellValuesByName
+    }, opts);
+
+    this._table._base.runAction('patch', '/' + this._table._urlEncodedNameOrId() + '/' + this.id, {}, updateBody, function(err,
+response, results) {
+        if (err) { done(err); return; }
+
+        that.setRawJson(results);
+        done(null, that);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Record.prototype.putUpdate" id="apidoc.element.airtable.Record.prototype.putUpdate">
+        function <span class="apidocSignatureSpan">airtable.</span>Record.prototype.putUpdate
+        <span class="apidocSignatureSpan">(cellValuesByName, opts, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Record.prototype.putUpdate = function (cellValuesByName, opts, done) {
+    var that = this;
+    if (!done) {
+        done = opts;
+        opts = {};
+    }
+    var updateBody = _.extend({
+        fields: cellValuesByName
+    }, opts);
+    this._table._base.runAction('put', '/' + this._table._urlEncodedNameOrId() + '/' + this.id, {}, updateBody, function(err, response
+, results) {
+        if (err) { done(err); return; }
+
+        that.setRawJson(results);
+        done(null, that);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Record.prototype.save" id="apidoc.element.airtable.Record.prototype.save">
+        function <span class="apidocSignatureSpan">airtable.</span>Record.prototype.save
+        <span class="apidocSignatureSpan">(done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Record.prototype.save = function (done) {
+    this.putUpdate(this.fields, done);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Record.prototype.set" id="apidoc.element.airtable.Record.prototype.set">
+        function <span class="apidocSignatureSpan">airtable.</span>Record.prototype.set
+        <span class="apidocSignatureSpan">(columnName, columnValue)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Record.prototype.set = function (columnName, columnValue) {
+    this.fields[columnName] = columnValue;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Record.prototype.setRawJson" id="apidoc.element.airtable.Record.prototype.setRawJson">
+        function <span class="apidocSignatureSpan">airtable.</span>Record.prototype.setRawJson
+        <span class="apidocSignatureSpan">(rawJson)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Record.prototype.setRawJson = function (rawJson) {
+    this._rawJson = rawJson;
+    this.fields = (this._rawJson &amp;&amp; this._rawJson.fields) || {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Table" id="apidoc.element.airtable.Table">
+        function <span class="apidocSignatureSpan">airtable.</span>Table
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Class() {
+    // All construction is actually done in the init method
+    if ( !initializing &amp;&amp; this.init )
+        this.init.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Table.prototype._createRecord" id="apidoc.element.airtable.Table.prototype._createRecord">
+        function <span class="apidocSignatureSpan">airtable.</span>Table.prototype._createRecord
+        <span class="apidocSignatureSpan">(recordData, optionalParameters, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Table.prototype._createRecord = function (recordData, optionalParameters, done) {
+    var that = this;
+    if (!done) {
+        done = optionalParameters;
+        optionalParameters = {};
+    }
+    var requestData = _.extend({fields: recordData}, optionalParameters);
+    this._base.runAction('post', '/' + that._urlEncodedNameOrId() + '/', {}, requestData, function(err, resp, body) {
+        if (err) { done(err); return; }
+
+        var record = new Record(that, body.id, body);
+        done(null, record);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Table.prototype._destroyRecord" id="apidoc.element.airtable.Table.prototype._destroyRecord">
+        function <span class="apidocSignatureSpan">airtable.</span>Table.prototype._destroyRecord
+        <span class="apidocSignatureSpan">(recordId, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Table.prototype._destroyRecord = function (recordId, done) {
+    var record = new Record(this, recordId);
+    record.destroy(done);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Table.prototype._findRecordById" id="apidoc.element.airtable.Table.prototype._findRecordById">
+        function <span class="apidocSignatureSpan">airtable.</span>Table.prototype._findRecordById
+        <span class="apidocSignatureSpan">(recordId, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Table.prototype._findRecordById = function (recordId, done) {
+    var record = new Record(this, recordId);
+    record.fetch(done);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Table.prototype._forEachRecord" id="apidoc.element.airtable.Table.prototype._forEachRecord">
+        function <span class="apidocSignatureSpan">airtable.</span>Table.prototype._forEachRecord
+        <span class="apidocSignatureSpan">(opts, callback, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Table.prototype._forEachRecord = function (opts, callback, done) {
+    if (arguments.length === 2) {
+        done = callback;
+        callback = opts;
+        opts = {};
+    }
+    var that = this;
+    var limit = Table.__recordsPerPageForIteration || 100;
+    var offset = null;
+
+    var nextPage = function() {
+        that._listRecords(limit, offset, opts, function(err, page, newOffset) {
+            if (err) { done(err); return; }
+
+            _.each(page, callback);
+
+            if (newOffset) {
+                offset = newOffset;
+                nextPage();
+            } else {
+                done();
+            }
+        });
+    };
+    nextPage();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Table.prototype._listRecords" id="apidoc.element.airtable.Table.prototype._listRecords">
+        function <span class="apidocSignatureSpan">airtable.</span>Table.prototype._listRecords
+        <span class="apidocSignatureSpan">(limit, offset, opts, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Table.prototype._listRecords = function (limit, offset, opts, done) {
+    var that = this;
+
+    if (!done) {
+        done = opts;
+        opts = {};
+    }
+    var listRecordsParameters = _.extend({
+        limit: limit, offset: offset
+    }, opts);
+
+    async.waterfall([
+        function(next) {
+            that._base.runAction('get', '/' + that._urlEncodedNameOrId() + '/', listRecordsParameters, {}, next);
+        },
+        function(response, results, next) {
+            var records = _.map(results.records, function(recordJson) {
+                return new Record(that, null, recordJson);
+            });
+            next(null, records, results.offset);
+        }
+    ], done);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Table.prototype._replaceRecord" id="apidoc.element.airtable.Table.prototype._replaceRecord">
+        function <span class="apidocSignatureSpan">airtable.</span>Table.prototype._replaceRecord
+        <span class="apidocSignatureSpan">(recordId, recordData, opts, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Table.prototype._replaceRecord = function (recordId, recordData, opts, done) {
+    var record = new Record(this, recordId);
+    record.putUpdate(recordData, opts, done);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Table.prototype._selectRecords" id="apidoc.element.airtable.Table.prototype._selectRecords">
+        function <span class="apidocSignatureSpan">airtable.</span>Table.prototype._selectRecords
+        <span class="apidocSignatureSpan">(params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Table.prototype._selectRecords = function (params) {
+    if (_.isUndefined(params)) {
+        params = {};
+    }
+
+    if (arguments.length &gt; 1) {
+        console.warn('Airtable: `select` takes only one parameter, but it was given ' +
+            arguments.length + ' parameters. ' +
+            'Use `eachPage` or `firstPage` to fetch records.');
+    }
+
+    if (_.isPlainObject(params)) {
+        var validationResults = Query.validateParams(params);
+
+        if (validationResults.errors.length) {
+            var formattedErrors = validationResults.errors.map(function(error) {
+                return '  * ' + error;
+            });
+
+            assert(false, 'Airtable: invalid parameters for `select`:\n' +
+                formattedErrors.join('\n'));
+        }
+
+        if (validationResults.ignoredKeys.length) {
+            console.warn('Airtable: the following parameters to `select` will be ignored: ' +
+                validationResults.ignoredKeys.join(', '));
+        }
+
+        return new Query(this, validationResults.validParams);
+    } else {
+        assert(false, 'Airtable: the parameter for `select` should be a plain object or undefined.');
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Table.prototype._updateRecord" id="apidoc.element.airtable.Table.prototype._updateRecord">
+        function <span class="apidocSignatureSpan">airtable.</span>Table.prototype._updateRecord
+        <span class="apidocSignatureSpan">(recordId, recordData, opts, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Table.prototype._updateRecord = function (recordId, recordData, opts, done) {
+    var record = new Record(this, recordId);
+    record.patchUpdate(recordData, opts, done);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Table.prototype._urlEncodedNameOrId" id="apidoc.element.airtable.Table.prototype._urlEncodedNameOrId">
+        function <span class="apidocSignatureSpan">airtable.</span>Table.prototype._urlEncodedNameOrId
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Table.prototype._urlEncodedNameOrId = function (){
+    return this.id || encodeURIComponent(this.name);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Table.prototype.init" id="apidoc.element.airtable.Table.prototype.init">
+        function <span class="apidocSignatureSpan">airtable.</span>Table.prototype.init
+        <span class="apidocSignatureSpan">(base, tableId, tableName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Table.prototype.init = function (base, tableId, tableName) {
+    this._base = base;
+    assert(tableId || tableName, 'Table name or table ID is required');
+    this.id = tableId;
+    this.name = tableName;
+
+    // Public API
+    this.find = this._findRecordById.bind(this);
+    this.select = this._selectRecords.bind(this);
+    this.create = this._createRecord.bind(this);
+    this.update = this._updateRecord.bind(this);
+    this.destroy = this._destroyRecord.bind(this);
+    this.replace = this._replaceRecord.bind(this);
+
+    // Deprecated API
+    this.list = deprecate(this._listRecords.bind(this),
+        'table.list',
+        'Airtable: `list()` is deprecated. Use `select()` instead.');
+    this.forEach = deprecate(this._forEachRecord.bind(this),
+        'table.forEach',
+        'Airtable: `forEach()` is deprecated. Use `select()` instead.');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.airtable_error" id="apidoc.element.airtable.airtable_error">
+        function <span class="apidocSignatureSpan">airtable.</span>airtable_error
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Class() {
+    // All construction is actually done in the init method
+    if ( !initializing &amp;&amp; this.init )
+        this.init.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.base" id="apidoc.element.airtable.base">
+        function <span class="apidocSignatureSpan">airtable.</span>base
+        <span class="apidocSignatureSpan">(baseId)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">base = function (baseId) {
+    return new Airtable().base(baseId);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.class" id="apidoc.element.airtable.class">
+        function <span class="apidocSignatureSpan">airtable.</span>class
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class = function (){}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.configure" id="apidoc.element.airtable.configure">
+        function <span class="apidocSignatureSpan">airtable.</span>configure
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">configure = function (opts) {
+    Airtable.apiKey = opts.apiKey;
+    Airtable.endpointUrl = opts.endpointUrl;
+    Airtable.apiVersion = opts.apiVersion;
+    Airtable.allowUnauthorizedSsl = opts.allowUnauthorizedSsl;
+    Airtable.noRetryIfRateLimited = opts.noRetryIfRateLimited;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  * apiKey - set the token to your secret API token. Visit [your account page](https://airtable.com/account) to create an API token
+.  (`AIRTABLE_API_KEY`)
+  * endpointUrl - the API endpoint to hit. You might want to override
+    it if you are using an API proxy (e.g. runscope.net) to debug your API calls. (`AIRTABLE_ENDPOINT_URL`)
+
+You can set the options globally via Airtable.configure:
+
+    Airtable.<span class="apidocCodeKeywordSpan">configure</span>({ apiKey: 'YOUR_SECRET_API_KEY' })
+
+
+Globally via process env (e.g. in 12factor setup).
+
+    export AIRTABLE_API_KEY=YOUR_SECRET_API_KEY
+
+You can also override the settings per connection:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.deprecate" id="apidoc.element.airtable.deprecate">
+        function <span class="apidocSignatureSpan">airtable.</span>deprecate
+        <span class="apidocSignatureSpan">(fn, key, message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deprecate(fn, key, message) {
+    return function() {
+        if (!didWarnForDeprecation[key]) {
+            didWarnForDeprecation[key] = true;
+            console.warn(message);
+        }
+        fn.apply(this, arguments);
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.extend" id="apidoc.element.airtable.extend">
+        function <span class="apidocSignatureSpan">airtable.</span>extend
+        <span class="apidocSignatureSpan">(prop)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function extender(prop) {
+    var _super = this.prototype;
+
+    // Instantiate a base class (but only create the instance,
+    // don't run the init constructor)
+    initializing = true;
+    var prototype = new this();
+    initializing = false;
+
+    // Copy the properties over onto the new prototype
+    for (var name in prop) {
+        // Check if we're overwriting an existing function
+        prototype[name] = typeof prop[name] == "function" &amp;&amp;
+            typeof _super[name] == "function" &amp;&amp; fnTest.test(prop[name]) ?
+            (function(name, fn){
+                return function() {
+                    var tmp = this._super;
+
+                    // Add a new ._super() method that is the same method
+                    // but on the super-class
+                    this._super = _super[name];
+
+                    // The method only need to be bound temporarily, so we
+                    // remove it when we're done executing
+                    var ret = fn.apply(this, arguments);
+                    this._super = tmp;
+
+                    return ret;
+                };
+            })(name, prop[name]) :
+        prop[name];
+    }
+
+    // The dummy class constructor
+    function Class() {
+        // All construction is actually done in the init method
+        if ( !initializing &amp;&amp; this.init )
+            this.init.apply(this, arguments);
+    }
+
+    // Populate our constructed prototype object
+    Class.prototype = prototype;
+
+    // Enforce the constructor to be what we expect
+    Class.prototype.constructor = Class;
+
+    // And make this class extendable
+    Class.extend = extender;
+
+    return Class;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+
+'use strict';
+
+var Class = require('./class');
+
+var AirtableError = Class.<span class="apidocCodeKeywordSpan">extend</span>({
+init: function(error, message, statusCode) {
+    this.error = error;
+    this.message = message;
+    this.statusCode = statusCode;
+},
+toString: function() {
+    return [
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.gruntfile" id="apidoc.element.airtable.gruntfile">
+        function <span class="apidocSignatureSpan">airtable.</span>gruntfile
+        <span class="apidocSignatureSpan">(grunt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">gruntfile = function (grunt) {
+    'use strict';
+
+    // Project configuration.
+    grunt.initConfig({
+        pkg: grunt.file.readJSON('package.json'),
+        jshint: {
+            // define the files to lint
+            files: ['gruntfile.js', 'lib/**/!(class.js)*.js'],
+            // configure JSHint (documented at http://www.jshint.com/docs/)
+            options: {
+                // more options here if you want to override JSHint defaults
+                strict: true,
+                globalstrict: true,
+                globals: {
+                    console: true,
+                    module: true,
+                    require: true,
+                    process: true,
+                    setTimeout: true
+                }
+            }
+        },
+        browserify: {
+            client: {
+                src: './lib/airtable.js',
+                dest: './build/airtable.browser.js',
+                options: {
+                    preBundleCB: function(b) {
+                        b.require('./lib/airtable.js', { expose: 'airtable' });
+                    }
+                }
+            }
+        },
+    });
+
+    // Load the plugin that provides the "uglify" task.
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+
+    // Default task(s).
+    grunt.registerTask('default', ['jshint']);
+
+    grunt.loadNpmTasks('grunt-browserify');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.object_to_query_param_string" id="apidoc.element.airtable.object_to_query_param_string">
+        function <span class="apidocSignatureSpan">airtable.</span>object_to_query_param_string
+        <span class="apidocSignatureSpan">(obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function objectToQueryParamString(obj) {
+    var parts = [];
+    var addFn = function(key, value) {
+        value = (value === null || value === undefined) ? '' : value;
+        parts.push(encodeURIComponent(key) + '=' + encodeURIComponent(value));
+    };
+
+    _.each(obj, function(value, key) {
+        buildParams(key, value, addFn);
+    });
+
+    return parts.join('&amp;').replace(/%20/g, '+');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.query" id="apidoc.element.airtable.query">
+        function <span class="apidocSignatureSpan">airtable.</span>query
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Class() {
+    // All construction is actually done in the init method
+    if ( !initializing &amp;&amp; this.init )
+        this.init.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.run_action" id="apidoc.element.airtable.run_action">
+        function <span class="apidocSignatureSpan">airtable.</span>run_action
+        <span class="apidocSignatureSpan">(base, method, path, queryParams, bodyData, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function runAction(base, method, path, queryParams, bodyData, callback) {
+    var url = base._airtable._endpointUrl + '/v' + base._airtable._apiVersionMajor + '/' + base._id + path + '?' + objectToQueryParamString
+(queryParams);
+
+    request({
+        method: method.toUpperCase(),
+        url: url,
+        body: bodyData,
+        json: true,
+        timeout: base._airtable.requestTimeout,
+        headers: {
+            'authorization': 'Bearer ' + base._airtable._apiKey,
+            'x-api-version': base._airtable._apiVersion,
+            'x-airtable-application-id': base.getId(),
+        },
+        // agentOptions are ignored when running in the browser.
+        agentOptions: {
+            rejectUnauthorized: base._airtable._allowUnauthorizedSsl
+        },
+    }, function(error, resp, body) {
+        if (error) {
+            callback(error, resp, body);
+            return;
+        }
+
+        if (resp.statusCode === 429 &amp;&amp; !base._airtable._noRetryIfRateLimited) {
+            setTimeout(function() {
+                runAction(base, method, path, queryParams, bodyData, callback);
+            }, internalConfig.RETRY_DELAY_IF_RATE_LIMITED);
+            return;
+        }
+
+        error = base._checkStatusForError(resp.statusCode, body);
+        callback(error, resp, body);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.toString" id="apidoc.element.airtable.toString">
+        function <span class="apidocSignatureSpan">airtable.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.typecheck" id="apidoc.element.airtable.typecheck">
+        function <span class="apidocSignatureSpan">airtable.</span>typecheck
+        <span class="apidocSignatureSpan">(fn, error)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function check(fn, error) {
+    return function(value) {
+        if (fn(value)) {
+            return {pass: true};
+        } else {
+            return {pass: false, error: error};
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.Base" id="apidoc.module.airtable.Base">module airtable.Base</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Base.Base" id="apidoc.element.airtable.Base.Base">
+        function <span class="apidocSignatureSpan">airtable.</span>Base
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Class() {
+    // All construction is actually done in the init method
+    if ( !initializing &amp;&amp; this.init )
+        this.init.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Base.createFunctor" id="apidoc.element.airtable.Base.createFunctor">
+        function <span class="apidocSignatureSpan">airtable.Base.</span>createFunctor
+        <span class="apidocSignatureSpan">(airtable, baseId)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createFunctor = function (airtable, baseId) {
+    var base = new Base(airtable, baseId);
+    var baseFn = function() {
+        return base.doCall.apply(base, arguments);
+    };
+    _.each(['table', 'runAction', 'getId'], function(baseMethod) {
+        baseFn[baseMethod] = base[baseMethod].bind(base);
+    });
+    baseFn._base = base;
+    baseFn.tables = base.tables;
+    return baseFn;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Base.extend" id="apidoc.element.airtable.Base.extend">
+        function <span class="apidocSignatureSpan">airtable.Base.</span>extend
+        <span class="apidocSignatureSpan">(prop)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function extender(prop) {
+    var _super = this.prototype;
+
+    // Instantiate a base class (but only create the instance,
+    // don't run the init constructor)
+    initializing = true;
+    var prototype = new this();
+    initializing = false;
+
+    // Copy the properties over onto the new prototype
+    for (var name in prop) {
+        // Check if we're overwriting an existing function
+        prototype[name] = typeof prop[name] == "function" &amp;&amp;
+            typeof _super[name] == "function" &amp;&amp; fnTest.test(prop[name]) ?
+            (function(name, fn){
+                return function() {
+                    var tmp = this._super;
+
+                    // Add a new ._super() method that is the same method
+                    // but on the super-class
+                    this._super = _super[name];
+
+                    // The method only need to be bound temporarily, so we
+                    // remove it when we're done executing
+                    var ret = fn.apply(this, arguments);
+                    this._super = tmp;
+
+                    return ret;
+                };
+            })(name, prop[name]) :
+        prop[name];
+    }
+
+    // The dummy class constructor
+    function Class() {
+        // All construction is actually done in the init method
+        if ( !initializing &amp;&amp; this.init )
+            this.init.apply(this, arguments);
+    }
+
+    // Populate our constructed prototype object
+    Class.prototype = prototype;
+
+    // Enforce the constructor to be what we expect
+    Class.prototype.constructor = Class;
+
+    // And make this class extendable
+    Class.extend = extender;
+
+    return Class;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+
+'use strict';
+
+var Class = require('./class');
+
+var AirtableError = Class.<span class="apidocCodeKeywordSpan">extend</span>({
+init: function(error, message, statusCode) {
+    this.error = error;
+    this.message = message;
+    this.statusCode = statusCode;
+},
+toString: function() {
+    return [
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.Base.createFunctor" id="apidoc.module.airtable.Base.createFunctor">module airtable.Base.createFunctor</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Base.createFunctor.createFunctor" id="apidoc.element.airtable.Base.createFunctor.createFunctor">
+        function <span class="apidocSignatureSpan">airtable.Base.</span>createFunctor
+        <span class="apidocSignatureSpan">(airtable, baseId)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createFunctor = function (airtable, baseId) {
+    var base = new Base(airtable, baseId);
+    var baseFn = function() {
+        return base.doCall.apply(base, arguments);
+    };
+    _.each(['table', 'runAction', 'getId'], function(baseMethod) {
+        baseFn[baseMethod] = base[baseMethod].bind(base);
+    });
+    baseFn._base = base;
+    baseFn.tables = base.tables;
+    return baseFn;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.Base.prototype" id="apidoc.module.airtable.Base.prototype">module airtable.Base.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Base.prototype._checkStatusForError" id="apidoc.element.airtable.Base.prototype._checkStatusForError">
+        function <span class="apidocSignatureSpan">airtable.Base.prototype.</span>_checkStatusForError
+        <span class="apidocSignatureSpan">(statusCode, body)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_checkStatusForError = function (statusCode, body) {
+    if (statusCode === 401) {
+        return new AirtableError('AUTHENTICATION_REQUIRED', 'You should provide valid api key to perform this operation', statusCode
+);
+    } else if (statusCode === 403) {
+        return new AirtableError('NOT_AUTHORIZED', 'You are not authorized to perform this operation', statusCode);
+    } else if (statusCode === 404) {
+        return (function(){
+            var message = (body &amp;&amp; body.error &amp;&amp; body.error.message) ? body.error.message : 'Could not find what you are looking
+ for';
+            return new AirtableError('NOT_FOUND', message, statusCode);
+        })();
+    } else if (statusCode === 413) {
+        return new AirtableError('REQUEST_TOO_LARGE', 'Request body is too large', statusCode);
+    } else if (statusCode === 422) {
+        return new AirtableError(body.error.type, body.error.message, statusCode);
+    } else if (statusCode === 429) {
+        return new AirtableError('TOO_MANY_REQUESTS', 'You have made too many requests in a short period of time. Please retry your
+ request later', statusCode);
+    }else if (statusCode === 500) {
+        return new AirtableError('SERVER_ERROR', 'Try again. If the problem persists, contact support.', statusCode);
+    } else if (statusCode === 503) {
+        return new AirtableError('SERVICE_UNAVAILABLE', 'The service is temporarily unavailable. Please retry shortly.', statusCode
+);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        if (resp.statusCode === 429 &amp;&amp; !base._airtable._noRetryIfRateLimited) {
+            setTimeout(function() {
+                runAction(base, method, path, queryParams, bodyData, callback);
+            }, internalConfig.RETRY_DELAY_IF_RATE_LIMITED);
+            return;
+        }
+
+        error = base.<span class="apidocCodeKeywordSpan">_checkStatusForError</span>(resp.statusCode, body);
+        callback(error, resp, body);
+    });
+}
+
+module.exports = runAction;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Base.prototype.constructor" id="apidoc.element.airtable.Base.prototype.constructor">
+        function <span class="apidocSignatureSpan">airtable.Base.prototype.</span>constructor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Class() {
+    // All construction is actually done in the init method
+    if ( !initializing &amp;&amp; this.init )
+        this.init.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Base.prototype.doCall" id="apidoc.element.airtable.Base.prototype.doCall">
+        function <span class="apidocSignatureSpan">airtable.Base.prototype.</span>doCall
+        <span class="apidocSignatureSpan">(tableName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">doCall = function (tableName) {
+    return this.table(tableName);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Base.prototype.getId" id="apidoc.element.airtable.Base.prototype.getId">
+        function <span class="apidocSignatureSpan">airtable.Base.prototype.</span>getId
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getId = function () {
+    return this._id;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    url: url,
+    body: bodyData,
+    json: true,
+    timeout: base._airtable.requestTimeout,
+    headers: {
+        'authorization': 'Bearer ' + base._airtable._apiKey,
+        'x-api-version': base._airtable._apiVersion,
+        'x-airtable-application-id': base.<span class="apidocCodeKeywordSpan">getId</span>(),
+    },
+    // agentOptions are ignored when running in the browser.
+    agentOptions: {
+        rejectUnauthorized: base._airtable._allowUnauthorizedSsl
+    },
+}, function(error, resp, body) {
+    if (error) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Base.prototype.init" id="apidoc.element.airtable.Base.prototype.init">
+        function <span class="apidocSignatureSpan">airtable.Base.prototype.</span>init
+        <span class="apidocSignatureSpan">(airtable, baseId)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function (airtable, baseId) {
+    this._airtable = airtable;
+    this._id = baseId;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Base.prototype.runAction" id="apidoc.element.airtable.Base.prototype.runAction">
+        function <span class="apidocSignatureSpan">airtable.Base.prototype.</span>runAction
+        <span class="apidocSignatureSpan">(method, path, queryParams, bodyData, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">runAction = function (method, path, queryParams, bodyData, callback) {
+    runAction(this, method, path, queryParams, bodyData, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    'The second parameter to `eachPage` must be a function or undefined');
+
+var that = this;
+var path = '/' + this._table._urlEncodedNameOrId();
+var params = _.clone(this._params);
+
+var inner = function() {
+    that._table._base.<span class="apidocCodeKeywordSpan">runAction</span>('get', path, params, {}, function(err, response
+, result) {
+        if (err) {
+            done(err, null);
+        } else {
+            var next;
+            if (result.offset) {
+                params.offset = result.offset;
+                next = inner;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Base.prototype.table" id="apidoc.element.airtable.Base.prototype.table">
+        function <span class="apidocSignatureSpan">airtable.Base.prototype.</span>table
+        <span class="apidocSignatureSpan">(tableName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">table = function (tableName) {
+    return new Table(this, null, tableName);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.Base.prototype._checkStatusForError" id="apidoc.module.airtable.Base.prototype._checkStatusForError">module airtable.Base.prototype._checkStatusForError</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Base.prototype._checkStatusForError._checkStatusForError" id="apidoc.element.airtable.Base.prototype._checkStatusForError._checkStatusForError">
+        function <span class="apidocSignatureSpan">airtable.Base.prototype.</span>_checkStatusForError
+        <span class="apidocSignatureSpan">(statusCode, body)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_checkStatusForError = function (statusCode, body) {
+    if (statusCode === 401) {
+        return new AirtableError('AUTHENTICATION_REQUIRED', 'You should provide valid api key to perform this operation', statusCode
+);
+    } else if (statusCode === 403) {
+        return new AirtableError('NOT_AUTHORIZED', 'You are not authorized to perform this operation', statusCode);
+    } else if (statusCode === 404) {
+        return (function(){
+            var message = (body &amp;&amp; body.error &amp;&amp; body.error.message) ? body.error.message : 'Could not find what you are looking
+ for';
+            return new AirtableError('NOT_FOUND', message, statusCode);
+        })();
+    } else if (statusCode === 413) {
+        return new AirtableError('REQUEST_TOO_LARGE', 'Request body is too large', statusCode);
+    } else if (statusCode === 422) {
+        return new AirtableError(body.error.type, body.error.message, statusCode);
+    } else if (statusCode === 429) {
+        return new AirtableError('TOO_MANY_REQUESTS', 'You have made too many requests in a short period of time. Please retry your
+ request later', statusCode);
+    }else if (statusCode === 500) {
+        return new AirtableError('SERVER_ERROR', 'Try again. If the problem persists, contact support.', statusCode);
+    } else if (statusCode === 503) {
+        return new AirtableError('SERVICE_UNAVAILABLE', 'The service is temporarily unavailable. Please retry shortly.', statusCode
+);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        if (resp.statusCode === 429 &amp;&amp; !base._airtable._noRetryIfRateLimited) {
+            setTimeout(function() {
+                runAction(base, method, path, queryParams, bodyData, callback);
+            }, internalConfig.RETRY_DELAY_IF_RATE_LIMITED);
+            return;
+        }
+
+        error = base.<span class="apidocCodeKeywordSpan">_checkStatusForError</span>(resp.statusCode, body);
+        callback(error, resp, body);
+    });
+}
+
+module.exports = runAction;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.Base.prototype.doCall" id="apidoc.module.airtable.Base.prototype.doCall">module airtable.Base.prototype.doCall</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Base.prototype.doCall.doCall" id="apidoc.element.airtable.Base.prototype.doCall.doCall">
+        function <span class="apidocSignatureSpan">airtable.Base.prototype.</span>doCall
+        <span class="apidocSignatureSpan">(tableName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">doCall = function (tableName) {
+    return this.table(tableName);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.Base.prototype.getId" id="apidoc.module.airtable.Base.prototype.getId">module airtable.Base.prototype.getId</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Base.prototype.getId.getId" id="apidoc.element.airtable.Base.prototype.getId.getId">
+        function <span class="apidocSignatureSpan">airtable.Base.prototype.</span>getId
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getId = function () {
+    return this._id;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    url: url,
+    body: bodyData,
+    json: true,
+    timeout: base._airtable.requestTimeout,
+    headers: {
+        'authorization': 'Bearer ' + base._airtable._apiKey,
+        'x-api-version': base._airtable._apiVersion,
+        'x-airtable-application-id': base.<span class="apidocCodeKeywordSpan">getId</span>(),
+    },
+    // agentOptions are ignored when running in the browser.
+    agentOptions: {
+        rejectUnauthorized: base._airtable._allowUnauthorizedSsl
+    },
+}, function(error, resp, body) {
+    if (error) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.Base.prototype.init" id="apidoc.module.airtable.Base.prototype.init">module airtable.Base.prototype.init</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Base.prototype.init.init" id="apidoc.element.airtable.Base.prototype.init.init">
+        function <span class="apidocSignatureSpan">airtable.Base.prototype.</span>init
+        <span class="apidocSignatureSpan">(airtable, baseId)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function (airtable, baseId) {
+    this._airtable = airtable;
+    this._id = baseId;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.Base.prototype.runAction" id="apidoc.module.airtable.Base.prototype.runAction">module airtable.Base.prototype.runAction</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Base.prototype.runAction.runAction" id="apidoc.element.airtable.Base.prototype.runAction.runAction">
+        function <span class="apidocSignatureSpan">airtable.Base.prototype.</span>runAction
+        <span class="apidocSignatureSpan">(method, path, queryParams, bodyData, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">runAction = function (method, path, queryParams, bodyData, callback) {
+    runAction(this, method, path, queryParams, bodyData, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    'The second parameter to `eachPage` must be a function or undefined');
+
+var that = this;
+var path = '/' + this._table._urlEncodedNameOrId();
+var params = _.clone(this._params);
+
+var inner = function() {
+    that._table._base.<span class="apidocCodeKeywordSpan">runAction</span>('get', path, params, {}, function(err, response
+, result) {
+        if (err) {
+            done(err, null);
+        } else {
+            var next;
+            if (result.offset) {
+                params.offset = result.offset;
+                next = inner;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.Base.prototype.table" id="apidoc.module.airtable.Base.prototype.table">module airtable.Base.prototype.table</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Base.prototype.table.table" id="apidoc.element.airtable.Base.prototype.table.table">
+        function <span class="apidocSignatureSpan">airtable.Base.prototype.</span>table
+        <span class="apidocSignatureSpan">(tableName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">table = function (tableName) {
+    return new Table(this, null, tableName);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.Record" id="apidoc.module.airtable.Record">module airtable.Record</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Record.Record" id="apidoc.element.airtable.Record.Record">
+        function <span class="apidocSignatureSpan">airtable.</span>Record
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Class() {
+    // All construction is actually done in the init method
+    if ( !initializing &amp;&amp; this.init )
+        this.init.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Record.extend" id="apidoc.element.airtable.Record.extend">
+        function <span class="apidocSignatureSpan">airtable.Record.</span>extend
+        <span class="apidocSignatureSpan">(prop)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function extender(prop) {
+    var _super = this.prototype;
+
+    // Instantiate a base class (but only create the instance,
+    // don't run the init constructor)
+    initializing = true;
+    var prototype = new this();
+    initializing = false;
+
+    // Copy the properties over onto the new prototype
+    for (var name in prop) {
+        // Check if we're overwriting an existing function
+        prototype[name] = typeof prop[name] == "function" &amp;&amp;
+            typeof _super[name] == "function" &amp;&amp; fnTest.test(prop[name]) ?
+            (function(name, fn){
+                return function() {
+                    var tmp = this._super;
+
+                    // Add a new ._super() method that is the same method
+                    // but on the super-class
+                    this._super = _super[name];
+
+                    // The method only need to be bound temporarily, so we
+                    // remove it when we're done executing
+                    var ret = fn.apply(this, arguments);
+                    this._super = tmp;
+
+                    return ret;
+                };
+            })(name, prop[name]) :
+        prop[name];
+    }
+
+    // The dummy class constructor
+    function Class() {
+        // All construction is actually done in the init method
+        if ( !initializing &amp;&amp; this.init )
+            this.init.apply(this, arguments);
+    }
+
+    // Populate our constructed prototype object
+    Class.prototype = prototype;
+
+    // Enforce the constructor to be what we expect
+    Class.prototype.constructor = Class;
+
+    // And make this class extendable
+    Class.extend = extender;
+
+    return Class;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+
+'use strict';
+
+var Class = require('./class');
+
+var AirtableError = Class.<span class="apidocCodeKeywordSpan">extend</span>({
+init: function(error, message, statusCode) {
+    this.error = error;
+    this.message = message;
+    this.statusCode = statusCode;
+},
+toString: function() {
+    return [
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.Record.prototype" id="apidoc.module.airtable.Record.prototype">module airtable.Record.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Record.prototype.constructor" id="apidoc.element.airtable.Record.prototype.constructor">
+        function <span class="apidocSignatureSpan">airtable.Record.prototype.</span>constructor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Class() {
+    // All construction is actually done in the init method
+    if ( !initializing &amp;&amp; this.init )
+        this.init.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Record.prototype.destroy" id="apidoc.element.airtable.Record.prototype.destroy">
+        function <span class="apidocSignatureSpan">airtable.Record.prototype.</span>destroy
+        <span class="apidocSignatureSpan">(done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">destroy = function (done) {
+    var that = this;
+    this._table._base.runAction('delete', '/' + this._table._urlEncodedNameOrId() + '/' + this.id, {}, {}, function(err, response
+, results) {
+        if (err) { done(err); return; }
+
+        done(null, that);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Record.prototype.fetch" id="apidoc.element.airtable.Record.prototype.fetch">
+        function <span class="apidocSignatureSpan">airtable.Record.prototype.</span>fetch
+        <span class="apidocSignatureSpan">(done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fetch = function (done) {
+    var that = this;
+    this._table._base.runAction('get', '/' + this._table._urlEncodedNameOrId() + '/' + this.id, {}, {}, function(err, response,
+results) {
+        if (err) { done(err); return; }
+
+        that.setRawJson(results);
+        done(null, that);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Record.prototype.get" id="apidoc.element.airtable.Record.prototype.get">
+        function <span class="apidocSignatureSpan">airtable.Record.prototype.</span>get
+        <span class="apidocSignatureSpan">(columnName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (columnName) {
+    return this.fields[columnName];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Record.prototype.getId" id="apidoc.element.airtable.Record.prototype.getId">
+        function <span class="apidocSignatureSpan">airtable.Record.prototype.</span>getId
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getId = function () {
+    return this.id;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    url: url,
+    body: bodyData,
+    json: true,
+    timeout: base._airtable.requestTimeout,
+    headers: {
+        'authorization': 'Bearer ' + base._airtable._apiKey,
+        'x-api-version': base._airtable._apiVersion,
+        'x-airtable-application-id': base.<span class="apidocCodeKeywordSpan">getId</span>(),
+    },
+    // agentOptions are ignored when running in the browser.
+    agentOptions: {
+        rejectUnauthorized: base._airtable._allowUnauthorizedSsl
+    },
+}, function(error, resp, body) {
+    if (error) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Record.prototype.init" id="apidoc.element.airtable.Record.prototype.init">
+        function <span class="apidocSignatureSpan">airtable.Record.prototype.</span>init
+        <span class="apidocSignatureSpan">(table, recordId, recordJson)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function (table, recordId, recordJson) {
+    this._table = table;
+    this.id = recordId || recordJson.id;
+    this.setRawJson(recordJson);
+    this.updateFields = this.patchUpdate;
+    this.replaceFields = this.putUpdate;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Record.prototype.patchUpdate" id="apidoc.element.airtable.Record.prototype.patchUpdate">
+        function <span class="apidocSignatureSpan">airtable.Record.prototype.</span>patchUpdate
+        <span class="apidocSignatureSpan">(cellValuesByName, opts, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">patchUpdate = function (cellValuesByName, opts, done) {
+    var that = this;
+    if (!done) {
+        done = opts;
+        opts = {};
+    }
+    var updateBody = _.extend({
+        fields: cellValuesByName
+    }, opts);
+
+    this._table._base.runAction('patch', '/' + this._table._urlEncodedNameOrId() + '/' + this.id, {}, updateBody, function(err,
+response, results) {
+        if (err) { done(err); return; }
+
+        that.setRawJson(results);
+        done(null, that);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Record.prototype.putUpdate" id="apidoc.element.airtable.Record.prototype.putUpdate">
+        function <span class="apidocSignatureSpan">airtable.Record.prototype.</span>putUpdate
+        <span class="apidocSignatureSpan">(cellValuesByName, opts, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">putUpdate = function (cellValuesByName, opts, done) {
+    var that = this;
+    if (!done) {
+        done = opts;
+        opts = {};
+    }
+    var updateBody = _.extend({
+        fields: cellValuesByName
+    }, opts);
+    this._table._base.runAction('put', '/' + this._table._urlEncodedNameOrId() + '/' + this.id, {}, updateBody, function(err, response
+, results) {
+        if (err) { done(err); return; }
+
+        that.setRawJson(results);
+        done(null, that);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Record.prototype.save" id="apidoc.element.airtable.Record.prototype.save">
+        function <span class="apidocSignatureSpan">airtable.Record.prototype.</span>save
+        <span class="apidocSignatureSpan">(done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">save = function (done) {
+    this.putUpdate(this.fields, done);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Record.prototype.set" id="apidoc.element.airtable.Record.prototype.set">
+        function <span class="apidocSignatureSpan">airtable.Record.prototype.</span>set
+        <span class="apidocSignatureSpan">(columnName, columnValue)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">set = function (columnName, columnValue) {
+    this.fields[columnName] = columnValue;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Record.prototype.setRawJson" id="apidoc.element.airtable.Record.prototype.setRawJson">
+        function <span class="apidocSignatureSpan">airtable.Record.prototype.</span>setRawJson
+        <span class="apidocSignatureSpan">(rawJson)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setRawJson = function (rawJson) {
+    this._rawJson = rawJson;
+    this.fields = (this._rawJson &amp;&amp; this._rawJson.fields) || {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.Record.prototype.destroy" id="apidoc.module.airtable.Record.prototype.destroy">module airtable.Record.prototype.destroy</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Record.prototype.destroy.destroy" id="apidoc.element.airtable.Record.prototype.destroy.destroy">
+        function <span class="apidocSignatureSpan">airtable.Record.prototype.</span>destroy
+        <span class="apidocSignatureSpan">(done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">destroy = function (done) {
+    var that = this;
+    this._table._base.runAction('delete', '/' + this._table._urlEncodedNameOrId() + '/' + this.id, {}, {}, function(err, response
+, results) {
+        if (err) { done(err); return; }
+
+        done(null, that);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.Record.prototype.fetch" id="apidoc.module.airtable.Record.prototype.fetch">module airtable.Record.prototype.fetch</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Record.prototype.fetch.fetch" id="apidoc.element.airtable.Record.prototype.fetch.fetch">
+        function <span class="apidocSignatureSpan">airtable.Record.prototype.</span>fetch
+        <span class="apidocSignatureSpan">(done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fetch = function (done) {
+    var that = this;
+    this._table._base.runAction('get', '/' + this._table._urlEncodedNameOrId() + '/' + this.id, {}, {}, function(err, response,
+results) {
+        if (err) { done(err); return; }
+
+        that.setRawJson(results);
+        done(null, that);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.Record.prototype.get" id="apidoc.module.airtable.Record.prototype.get">module airtable.Record.prototype.get</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Record.prototype.get.get" id="apidoc.element.airtable.Record.prototype.get.get">
+        function <span class="apidocSignatureSpan">airtable.Record.prototype.</span>get
+        <span class="apidocSignatureSpan">(columnName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (columnName) {
+    return this.fields[columnName];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.Record.prototype.getId" id="apidoc.module.airtable.Record.prototype.getId">module airtable.Record.prototype.getId</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Record.prototype.getId.getId" id="apidoc.element.airtable.Record.prototype.getId.getId">
+        function <span class="apidocSignatureSpan">airtable.Record.prototype.</span>getId
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getId = function () {
+    return this.id;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    url: url,
+    body: bodyData,
+    json: true,
+    timeout: base._airtable.requestTimeout,
+    headers: {
+        'authorization': 'Bearer ' + base._airtable._apiKey,
+        'x-api-version': base._airtable._apiVersion,
+        'x-airtable-application-id': base.<span class="apidocCodeKeywordSpan">getId</span>(),
+    },
+    // agentOptions are ignored when running in the browser.
+    agentOptions: {
+        rejectUnauthorized: base._airtable._allowUnauthorizedSsl
+    },
+}, function(error, resp, body) {
+    if (error) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.Record.prototype.init" id="apidoc.module.airtable.Record.prototype.init">module airtable.Record.prototype.init</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Record.prototype.init.init" id="apidoc.element.airtable.Record.prototype.init.init">
+        function <span class="apidocSignatureSpan">airtable.Record.prototype.</span>init
+        <span class="apidocSignatureSpan">(table, recordId, recordJson)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function (table, recordId, recordJson) {
+    this._table = table;
+    this.id = recordId || recordJson.id;
+    this.setRawJson(recordJson);
+    this.updateFields = this.patchUpdate;
+    this.replaceFields = this.putUpdate;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.Record.prototype.patchUpdate" id="apidoc.module.airtable.Record.prototype.patchUpdate">module airtable.Record.prototype.patchUpdate</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Record.prototype.patchUpdate.patchUpdate" id="apidoc.element.airtable.Record.prototype.patchUpdate.patchUpdate">
+        function <span class="apidocSignatureSpan">airtable.Record.prototype.</span>patchUpdate
+        <span class="apidocSignatureSpan">(cellValuesByName, opts, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">patchUpdate = function (cellValuesByName, opts, done) {
+    var that = this;
+    if (!done) {
+        done = opts;
+        opts = {};
+    }
+    var updateBody = _.extend({
+        fields: cellValuesByName
+    }, opts);
+
+    this._table._base.runAction('patch', '/' + this._table._urlEncodedNameOrId() + '/' + this.id, {}, updateBody, function(err,
+response, results) {
+        if (err) { done(err); return; }
+
+        that.setRawJson(results);
+        done(null, that);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.Record.prototype.putUpdate" id="apidoc.module.airtable.Record.prototype.putUpdate">module airtable.Record.prototype.putUpdate</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Record.prototype.putUpdate.putUpdate" id="apidoc.element.airtable.Record.prototype.putUpdate.putUpdate">
+        function <span class="apidocSignatureSpan">airtable.Record.prototype.</span>putUpdate
+        <span class="apidocSignatureSpan">(cellValuesByName, opts, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">putUpdate = function (cellValuesByName, opts, done) {
+    var that = this;
+    if (!done) {
+        done = opts;
+        opts = {};
+    }
+    var updateBody = _.extend({
+        fields: cellValuesByName
+    }, opts);
+    this._table._base.runAction('put', '/' + this._table._urlEncodedNameOrId() + '/' + this.id, {}, updateBody, function(err, response
+, results) {
+        if (err) { done(err); return; }
+
+        that.setRawJson(results);
+        done(null, that);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.Record.prototype.save" id="apidoc.module.airtable.Record.prototype.save">module airtable.Record.prototype.save</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Record.prototype.save.save" id="apidoc.element.airtable.Record.prototype.save.save">
+        function <span class="apidocSignatureSpan">airtable.Record.prototype.</span>save
+        <span class="apidocSignatureSpan">(done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">save = function (done) {
+    this.putUpdate(this.fields, done);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.Record.prototype.set" id="apidoc.module.airtable.Record.prototype.set">module airtable.Record.prototype.set</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Record.prototype.set.set" id="apidoc.element.airtable.Record.prototype.set.set">
+        function <span class="apidocSignatureSpan">airtable.Record.prototype.</span>set
+        <span class="apidocSignatureSpan">(columnName, columnValue)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">set = function (columnName, columnValue) {
+    this.fields[columnName] = columnValue;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.Record.prototype.setRawJson" id="apidoc.module.airtable.Record.prototype.setRawJson">module airtable.Record.prototype.setRawJson</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Record.prototype.setRawJson.setRawJson" id="apidoc.element.airtable.Record.prototype.setRawJson.setRawJson">
+        function <span class="apidocSignatureSpan">airtable.Record.prototype.</span>setRawJson
+        <span class="apidocSignatureSpan">(rawJson)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setRawJson = function (rawJson) {
+    this._rawJson = rawJson;
+    this.fields = (this._rawJson &amp;&amp; this._rawJson.fields) || {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.Table" id="apidoc.module.airtable.Table">module airtable.Table</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Table.Table" id="apidoc.element.airtable.Table.Table">
+        function <span class="apidocSignatureSpan">airtable.</span>Table
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Class() {
+    // All construction is actually done in the init method
+    if ( !initializing &amp;&amp; this.init )
+        this.init.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Table.extend" id="apidoc.element.airtable.Table.extend">
+        function <span class="apidocSignatureSpan">airtable.Table.</span>extend
+        <span class="apidocSignatureSpan">(prop)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function extender(prop) {
+    var _super = this.prototype;
+
+    // Instantiate a base class (but only create the instance,
+    // don't run the init constructor)
+    initializing = true;
+    var prototype = new this();
+    initializing = false;
+
+    // Copy the properties over onto the new prototype
+    for (var name in prop) {
+        // Check if we're overwriting an existing function
+        prototype[name] = typeof prop[name] == "function" &amp;&amp;
+            typeof _super[name] == "function" &amp;&amp; fnTest.test(prop[name]) ?
+            (function(name, fn){
+                return function() {
+                    var tmp = this._super;
+
+                    // Add a new ._super() method that is the same method
+                    // but on the super-class
+                    this._super = _super[name];
+
+                    // The method only need to be bound temporarily, so we
+                    // remove it when we're done executing
+                    var ret = fn.apply(this, arguments);
+                    this._super = tmp;
+
+                    return ret;
+                };
+            })(name, prop[name]) :
+        prop[name];
+    }
+
+    // The dummy class constructor
+    function Class() {
+        // All construction is actually done in the init method
+        if ( !initializing &amp;&amp; this.init )
+            this.init.apply(this, arguments);
+    }
+
+    // Populate our constructed prototype object
+    Class.prototype = prototype;
+
+    // Enforce the constructor to be what we expect
+    Class.prototype.constructor = Class;
+
+    // And make this class extendable
+    Class.extend = extender;
+
+    return Class;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+
+'use strict';
+
+var Class = require('./class');
+
+var AirtableError = Class.<span class="apidocCodeKeywordSpan">extend</span>({
+init: function(error, message, statusCode) {
+    this.error = error;
+    this.message = message;
+    this.statusCode = statusCode;
+},
+toString: function() {
+    return [
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.Table.prototype" id="apidoc.module.airtable.Table.prototype">module airtable.Table.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Table.prototype._createRecord" id="apidoc.element.airtable.Table.prototype._createRecord">
+        function <span class="apidocSignatureSpan">airtable.Table.prototype.</span>_createRecord
+        <span class="apidocSignatureSpan">(recordData, optionalParameters, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_createRecord = function (recordData, optionalParameters, done) {
+    var that = this;
+    if (!done) {
+        done = optionalParameters;
+        optionalParameters = {};
+    }
+    var requestData = _.extend({fields: recordData}, optionalParameters);
+    this._base.runAction('post', '/' + that._urlEncodedNameOrId() + '/', {}, requestData, function(err, resp, body) {
+        if (err) { done(err); return; }
+
+        var record = new Record(that, body.id, body);
+        done(null, record);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Table.prototype._destroyRecord" id="apidoc.element.airtable.Table.prototype._destroyRecord">
+        function <span class="apidocSignatureSpan">airtable.Table.prototype.</span>_destroyRecord
+        <span class="apidocSignatureSpan">(recordId, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_destroyRecord = function (recordId, done) {
+    var record = new Record(this, recordId);
+    record.destroy(done);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Table.prototype._findRecordById" id="apidoc.element.airtable.Table.prototype._findRecordById">
+        function <span class="apidocSignatureSpan">airtable.Table.prototype.</span>_findRecordById
+        <span class="apidocSignatureSpan">(recordId, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_findRecordById = function (recordId, done) {
+    var record = new Record(this, recordId);
+    record.fetch(done);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Table.prototype._forEachRecord" id="apidoc.element.airtable.Table.prototype._forEachRecord">
+        function <span class="apidocSignatureSpan">airtable.Table.prototype.</span>_forEachRecord
+        <span class="apidocSignatureSpan">(opts, callback, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_forEachRecord = function (opts, callback, done) {
+    if (arguments.length === 2) {
+        done = callback;
+        callback = opts;
+        opts = {};
+    }
+    var that = this;
+    var limit = Table.__recordsPerPageForIteration || 100;
+    var offset = null;
+
+    var nextPage = function() {
+        that._listRecords(limit, offset, opts, function(err, page, newOffset) {
+            if (err) { done(err); return; }
+
+            _.each(page, callback);
+
+            if (newOffset) {
+                offset = newOffset;
+                nextPage();
+            } else {
+                done();
+            }
+        });
+    };
+    nextPage();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Table.prototype._listRecords" id="apidoc.element.airtable.Table.prototype._listRecords">
+        function <span class="apidocSignatureSpan">airtable.Table.prototype.</span>_listRecords
+        <span class="apidocSignatureSpan">(limit, offset, opts, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_listRecords = function (limit, offset, opts, done) {
+    var that = this;
+
+    if (!done) {
+        done = opts;
+        opts = {};
+    }
+    var listRecordsParameters = _.extend({
+        limit: limit, offset: offset
+    }, opts);
+
+    async.waterfall([
+        function(next) {
+            that._base.runAction('get', '/' + that._urlEncodedNameOrId() + '/', listRecordsParameters, {}, next);
+        },
+        function(response, results, next) {
+            var records = _.map(results.records, function(recordJson) {
+                return new Record(that, null, recordJson);
+            });
+            next(null, records, results.offset);
+        }
+    ], done);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Table.prototype._replaceRecord" id="apidoc.element.airtable.Table.prototype._replaceRecord">
+        function <span class="apidocSignatureSpan">airtable.Table.prototype.</span>_replaceRecord
+        <span class="apidocSignatureSpan">(recordId, recordData, opts, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_replaceRecord = function (recordId, recordData, opts, done) {
+    var record = new Record(this, recordId);
+    record.putUpdate(recordData, opts, done);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Table.prototype._selectRecords" id="apidoc.element.airtable.Table.prototype._selectRecords">
+        function <span class="apidocSignatureSpan">airtable.Table.prototype.</span>_selectRecords
+        <span class="apidocSignatureSpan">(params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_selectRecords = function (params) {
+    if (_.isUndefined(params)) {
+        params = {};
+    }
+
+    if (arguments.length &gt; 1) {
+        console.warn('Airtable: `select` takes only one parameter, but it was given ' +
+            arguments.length + ' parameters. ' +
+            'Use `eachPage` or `firstPage` to fetch records.');
+    }
+
+    if (_.isPlainObject(params)) {
+        var validationResults = Query.validateParams(params);
+
+        if (validationResults.errors.length) {
+            var formattedErrors = validationResults.errors.map(function(error) {
+                return '  * ' + error;
+            });
+
+            assert(false, 'Airtable: invalid parameters for `select`:\n' +
+                formattedErrors.join('\n'));
+        }
+
+        if (validationResults.ignoredKeys.length) {
+            console.warn('Airtable: the following parameters to `select` will be ignored: ' +
+                validationResults.ignoredKeys.join(', '));
+        }
+
+        return new Query(this, validationResults.validParams);
+    } else {
+        assert(false, 'Airtable: the parameter for `select` should be a plain object or undefined.');
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Table.prototype._updateRecord" id="apidoc.element.airtable.Table.prototype._updateRecord">
+        function <span class="apidocSignatureSpan">airtable.Table.prototype.</span>_updateRecord
+        <span class="apidocSignatureSpan">(recordId, recordData, opts, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_updateRecord = function (recordId, recordData, opts, done) {
+    var record = new Record(this, recordId);
+    record.patchUpdate(recordData, opts, done);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Table.prototype._urlEncodedNameOrId" id="apidoc.element.airtable.Table.prototype._urlEncodedNameOrId">
+        function <span class="apidocSignatureSpan">airtable.Table.prototype.</span>_urlEncodedNameOrId
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_urlEncodedNameOrId = function (){
+    return this.id || encodeURIComponent(this.name);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+assert(_.isFunction(pageCallback),
+    'The first parameter to `eachPage` must be a function');
+
+assert(_.isFunction(done) || _.isUndefined(done),
+    'The second parameter to `eachPage` must be a function or undefined');
+
+var that = this;
+var path = '/' + this._table.<span class="apidocCodeKeywordSpan">_urlEncodedNameOrId</span>();
+var params = _.clone(this._params);
+
+var inner = function() {
+    that._table._base.runAction('get', path, params, {}, function(err, response, result) {
+        if (err) {
+            done(err, null);
+        } else {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Table.prototype.constructor" id="apidoc.element.airtable.Table.prototype.constructor">
+        function <span class="apidocSignatureSpan">airtable.Table.prototype.</span>constructor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Class() {
+    // All construction is actually done in the init method
+    if ( !initializing &amp;&amp; this.init )
+        this.init.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Table.prototype.init" id="apidoc.element.airtable.Table.prototype.init">
+        function <span class="apidocSignatureSpan">airtable.Table.prototype.</span>init
+        <span class="apidocSignatureSpan">(base, tableId, tableName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function (base, tableId, tableName) {
+    this._base = base;
+    assert(tableId || tableName, 'Table name or table ID is required');
+    this.id = tableId;
+    this.name = tableName;
+
+    // Public API
+    this.find = this._findRecordById.bind(this);
+    this.select = this._selectRecords.bind(this);
+    this.create = this._createRecord.bind(this);
+    this.update = this._updateRecord.bind(this);
+    this.destroy = this._destroyRecord.bind(this);
+    this.replace = this._replaceRecord.bind(this);
+
+    // Deprecated API
+    this.list = deprecate(this._listRecords.bind(this),
+        'table.list',
+        'Airtable: `list()` is deprecated. Use `select()` instead.');
+    this.forEach = deprecate(this._forEachRecord.bind(this),
+        'table.forEach',
+        'Airtable: `forEach()` is deprecated. Use `select()` instead.');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.Table.prototype._createRecord" id="apidoc.module.airtable.Table.prototype._createRecord">module airtable.Table.prototype._createRecord</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Table.prototype._createRecord._createRecord" id="apidoc.element.airtable.Table.prototype._createRecord._createRecord">
+        function <span class="apidocSignatureSpan">airtable.Table.prototype.</span>_createRecord
+        <span class="apidocSignatureSpan">(recordData, optionalParameters, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_createRecord = function (recordData, optionalParameters, done) {
+    var that = this;
+    if (!done) {
+        done = optionalParameters;
+        optionalParameters = {};
+    }
+    var requestData = _.extend({fields: recordData}, optionalParameters);
+    this._base.runAction('post', '/' + that._urlEncodedNameOrId() + '/', {}, requestData, function(err, resp, body) {
+        if (err) { done(err); return; }
+
+        var record = new Record(that, body.id, body);
+        done(null, record);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.Table.prototype._destroyRecord" id="apidoc.module.airtable.Table.prototype._destroyRecord">module airtable.Table.prototype._destroyRecord</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Table.prototype._destroyRecord._destroyRecord" id="apidoc.element.airtable.Table.prototype._destroyRecord._destroyRecord">
+        function <span class="apidocSignatureSpan">airtable.Table.prototype.</span>_destroyRecord
+        <span class="apidocSignatureSpan">(recordId, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_destroyRecord = function (recordId, done) {
+    var record = new Record(this, recordId);
+    record.destroy(done);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.Table.prototype._findRecordById" id="apidoc.module.airtable.Table.prototype._findRecordById">module airtable.Table.prototype._findRecordById</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Table.prototype._findRecordById._findRecordById" id="apidoc.element.airtable.Table.prototype._findRecordById._findRecordById">
+        function <span class="apidocSignatureSpan">airtable.Table.prototype.</span>_findRecordById
+        <span class="apidocSignatureSpan">(recordId, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_findRecordById = function (recordId, done) {
+    var record = new Record(this, recordId);
+    record.fetch(done);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.Table.prototype._forEachRecord" id="apidoc.module.airtable.Table.prototype._forEachRecord">module airtable.Table.prototype._forEachRecord</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Table.prototype._forEachRecord._forEachRecord" id="apidoc.element.airtable.Table.prototype._forEachRecord._forEachRecord">
+        function <span class="apidocSignatureSpan">airtable.Table.prototype.</span>_forEachRecord
+        <span class="apidocSignatureSpan">(opts, callback, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_forEachRecord = function (opts, callback, done) {
+    if (arguments.length === 2) {
+        done = callback;
+        callback = opts;
+        opts = {};
+    }
+    var that = this;
+    var limit = Table.__recordsPerPageForIteration || 100;
+    var offset = null;
+
+    var nextPage = function() {
+        that._listRecords(limit, offset, opts, function(err, page, newOffset) {
+            if (err) { done(err); return; }
+
+            _.each(page, callback);
+
+            if (newOffset) {
+                offset = newOffset;
+                nextPage();
+            } else {
+                done();
+            }
+        });
+    };
+    nextPage();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.Table.prototype._listRecords" id="apidoc.module.airtable.Table.prototype._listRecords">module airtable.Table.prototype._listRecords</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Table.prototype._listRecords._listRecords" id="apidoc.element.airtable.Table.prototype._listRecords._listRecords">
+        function <span class="apidocSignatureSpan">airtable.Table.prototype.</span>_listRecords
+        <span class="apidocSignatureSpan">(limit, offset, opts, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_listRecords = function (limit, offset, opts, done) {
+    var that = this;
+
+    if (!done) {
+        done = opts;
+        opts = {};
+    }
+    var listRecordsParameters = _.extend({
+        limit: limit, offset: offset
+    }, opts);
+
+    async.waterfall([
+        function(next) {
+            that._base.runAction('get', '/' + that._urlEncodedNameOrId() + '/', listRecordsParameters, {}, next);
+        },
+        function(response, results, next) {
+            var records = _.map(results.records, function(recordJson) {
+                return new Record(that, null, recordJson);
+            });
+            next(null, records, results.offset);
+        }
+    ], done);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.Table.prototype._replaceRecord" id="apidoc.module.airtable.Table.prototype._replaceRecord">module airtable.Table.prototype._replaceRecord</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Table.prototype._replaceRecord._replaceRecord" id="apidoc.element.airtable.Table.prototype._replaceRecord._replaceRecord">
+        function <span class="apidocSignatureSpan">airtable.Table.prototype.</span>_replaceRecord
+        <span class="apidocSignatureSpan">(recordId, recordData, opts, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_replaceRecord = function (recordId, recordData, opts, done) {
+    var record = new Record(this, recordId);
+    record.putUpdate(recordData, opts, done);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.Table.prototype._selectRecords" id="apidoc.module.airtable.Table.prototype._selectRecords">module airtable.Table.prototype._selectRecords</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Table.prototype._selectRecords._selectRecords" id="apidoc.element.airtable.Table.prototype._selectRecords._selectRecords">
+        function <span class="apidocSignatureSpan">airtable.Table.prototype.</span>_selectRecords
+        <span class="apidocSignatureSpan">(params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_selectRecords = function (params) {
+    if (_.isUndefined(params)) {
+        params = {};
+    }
+
+    if (arguments.length &gt; 1) {
+        console.warn('Airtable: `select` takes only one parameter, but it was given ' +
+            arguments.length + ' parameters. ' +
+            'Use `eachPage` or `firstPage` to fetch records.');
+    }
+
+    if (_.isPlainObject(params)) {
+        var validationResults = Query.validateParams(params);
+
+        if (validationResults.errors.length) {
+            var formattedErrors = validationResults.errors.map(function(error) {
+                return '  * ' + error;
+            });
+
+            assert(false, 'Airtable: invalid parameters for `select`:\n' +
+                formattedErrors.join('\n'));
+        }
+
+        if (validationResults.ignoredKeys.length) {
+            console.warn('Airtable: the following parameters to `select` will be ignored: ' +
+                validationResults.ignoredKeys.join(', '));
+        }
+
+        return new Query(this, validationResults.validParams);
+    } else {
+        assert(false, 'Airtable: the parameter for `select` should be a plain object or undefined.');
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.Table.prototype._updateRecord" id="apidoc.module.airtable.Table.prototype._updateRecord">module airtable.Table.prototype._updateRecord</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Table.prototype._updateRecord._updateRecord" id="apidoc.element.airtable.Table.prototype._updateRecord._updateRecord">
+        function <span class="apidocSignatureSpan">airtable.Table.prototype.</span>_updateRecord
+        <span class="apidocSignatureSpan">(recordId, recordData, opts, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_updateRecord = function (recordId, recordData, opts, done) {
+    var record = new Record(this, recordId);
+    record.patchUpdate(recordData, opts, done);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.Table.prototype._urlEncodedNameOrId" id="apidoc.module.airtable.Table.prototype._urlEncodedNameOrId">module airtable.Table.prototype._urlEncodedNameOrId</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Table.prototype._urlEncodedNameOrId._urlEncodedNameOrId" id="apidoc.element.airtable.Table.prototype._urlEncodedNameOrId._urlEncodedNameOrId">
+        function <span class="apidocSignatureSpan">airtable.Table.prototype.</span>_urlEncodedNameOrId
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_urlEncodedNameOrId = function (){
+    return this.id || encodeURIComponent(this.name);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+assert(_.isFunction(pageCallback),
+    'The first parameter to `eachPage` must be a function');
+
+assert(_.isFunction(done) || _.isUndefined(done),
+    'The second parameter to `eachPage` must be a function or undefined');
+
+var that = this;
+var path = '/' + this._table.<span class="apidocCodeKeywordSpan">_urlEncodedNameOrId</span>();
+var params = _.clone(this._params);
+
+var inner = function() {
+    that._table._base.runAction('get', path, params, {}, function(err, response, result) {
+        if (err) {
+            done(err, null);
+        } else {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.Table.prototype.init" id="apidoc.module.airtable.Table.prototype.init">module airtable.Table.prototype.init</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.Table.prototype.init.init" id="apidoc.element.airtable.Table.prototype.init.init">
+        function <span class="apidocSignatureSpan">airtable.Table.prototype.</span>init
+        <span class="apidocSignatureSpan">(base, tableId, tableName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function (base, tableId, tableName) {
+    this._base = base;
+    assert(tableId || tableName, 'Table name or table ID is required');
+    this.id = tableId;
+    this.name = tableName;
+
+    // Public API
+    this.find = this._findRecordById.bind(this);
+    this.select = this._selectRecords.bind(this);
+    this.create = this._createRecord.bind(this);
+    this.update = this._updateRecord.bind(this);
+    this.destroy = this._destroyRecord.bind(this);
+    this.replace = this._replaceRecord.bind(this);
+
+    // Deprecated API
+    this.list = deprecate(this._listRecords.bind(this),
+        'table.list',
+        'Airtable: `list()` is deprecated. Use `select()` instead.');
+    this.forEach = deprecate(this._forEachRecord.bind(this),
+        'table.forEach',
+        'Airtable: `forEach()` is deprecated. Use `select()` instead.');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.airtable_error" id="apidoc.module.airtable.airtable_error">module airtable.airtable_error</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.airtable_error.airtable_error" id="apidoc.element.airtable.airtable_error.airtable_error">
+        function <span class="apidocSignatureSpan">airtable.</span>airtable_error
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Class() {
+    // All construction is actually done in the init method
+    if ( !initializing &amp;&amp; this.init )
+        this.init.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.airtable_error.extend" id="apidoc.element.airtable.airtable_error.extend">
+        function <span class="apidocSignatureSpan">airtable.airtable_error.</span>extend
+        <span class="apidocSignatureSpan">(prop)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function extender(prop) {
+    var _super = this.prototype;
+
+    // Instantiate a base class (but only create the instance,
+    // don't run the init constructor)
+    initializing = true;
+    var prototype = new this();
+    initializing = false;
+
+    // Copy the properties over onto the new prototype
+    for (var name in prop) {
+        // Check if we're overwriting an existing function
+        prototype[name] = typeof prop[name] == "function" &amp;&amp;
+            typeof _super[name] == "function" &amp;&amp; fnTest.test(prop[name]) ?
+            (function(name, fn){
+                return function() {
+                    var tmp = this._super;
+
+                    // Add a new ._super() method that is the same method
+                    // but on the super-class
+                    this._super = _super[name];
+
+                    // The method only need to be bound temporarily, so we
+                    // remove it when we're done executing
+                    var ret = fn.apply(this, arguments);
+                    this._super = tmp;
+
+                    return ret;
+                };
+            })(name, prop[name]) :
+        prop[name];
+    }
+
+    // The dummy class constructor
+    function Class() {
+        // All construction is actually done in the init method
+        if ( !initializing &amp;&amp; this.init )
+            this.init.apply(this, arguments);
+    }
+
+    // Populate our constructed prototype object
+    Class.prototype = prototype;
+
+    // Enforce the constructor to be what we expect
+    Class.prototype.constructor = Class;
+
+    // And make this class extendable
+    Class.extend = extender;
+
+    return Class;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+
+'use strict';
+
+var Class = require('./class');
+
+var AirtableError = Class.<span class="apidocCodeKeywordSpan">extend</span>({
+init: function(error, message, statusCode) {
+    this.error = error;
+    this.message = message;
+    this.statusCode = statusCode;
+},
+toString: function() {
+    return [
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.airtable_error.prototype" id="apidoc.module.airtable.airtable_error.prototype">module airtable.airtable_error.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.airtable_error.prototype.constructor" id="apidoc.element.airtable.airtable_error.prototype.constructor">
+        function <span class="apidocSignatureSpan">airtable.airtable_error.prototype.</span>constructor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Class() {
+    // All construction is actually done in the init method
+    if ( !initializing &amp;&amp; this.init )
+        this.init.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.airtable_error.prototype.init" id="apidoc.element.airtable.airtable_error.prototype.init">
+        function <span class="apidocSignatureSpan">airtable.airtable_error.prototype.</span>init
+        <span class="apidocSignatureSpan">(error, message, statusCode)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function (error, message, statusCode) {
+    this.error = error;
+    this.message = message;
+    this.statusCode = statusCode;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.airtable_error.prototype.toString" id="apidoc.element.airtable.airtable_error.prototype.toString">
+        function <span class="apidocSignatureSpan">airtable.airtable_error.prototype.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return [
+        this.message,
+        '(', this.error, ')',
+        this.statusCode ?  '[Http code ' + this.statusCode + ']' : ''
+    ].join('');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.base" id="apidoc.module.airtable.base">module airtable.base</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.base.base" id="apidoc.element.airtable.base.base">
+        function <span class="apidocSignatureSpan">airtable.</span>base
+        <span class="apidocSignatureSpan">(baseId)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">base = function (baseId) {
+    return new Airtable().base(baseId);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.class" id="apidoc.module.airtable.class">module airtable.class</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.class.class" id="apidoc.element.airtable.class.class">
+        function <span class="apidocSignatureSpan">airtable.</span>class
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class = function (){}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.class.extend" id="apidoc.element.airtable.class.extend">
+        function <span class="apidocSignatureSpan">airtable.class.</span>extend
+        <span class="apidocSignatureSpan">(prop)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function extender(prop) {
+    var _super = this.prototype;
+
+    // Instantiate a base class (but only create the instance,
+    // don't run the init constructor)
+    initializing = true;
+    var prototype = new this();
+    initializing = false;
+
+    // Copy the properties over onto the new prototype
+    for (var name in prop) {
+        // Check if we're overwriting an existing function
+        prototype[name] = typeof prop[name] == "function" &amp;&amp;
+            typeof _super[name] == "function" &amp;&amp; fnTest.test(prop[name]) ?
+            (function(name, fn){
+                return function() {
+                    var tmp = this._super;
+
+                    // Add a new ._super() method that is the same method
+                    // but on the super-class
+                    this._super = _super[name];
+
+                    // The method only need to be bound temporarily, so we
+                    // remove it when we're done executing
+                    var ret = fn.apply(this, arguments);
+                    this._super = tmp;
+
+                    return ret;
+                };
+            })(name, prop[name]) :
+        prop[name];
+    }
+
+    // The dummy class constructor
+    function Class() {
+        // All construction is actually done in the init method
+        if ( !initializing &amp;&amp; this.init )
+            this.init.apply(this, arguments);
+    }
+
+    // Populate our constructed prototype object
+    Class.prototype = prototype;
+
+    // Enforce the constructor to be what we expect
+    Class.prototype.constructor = Class;
+
+    // And make this class extendable
+    Class.extend = extender;
+
+    return Class;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+
+'use strict';
+
+var Class = require('./class');
+
+var AirtableError = Class.<span class="apidocCodeKeywordSpan">extend</span>({
+init: function(error, message, statusCode) {
+    this.error = error;
+    this.message = message;
+    this.statusCode = statusCode;
+},
+toString: function() {
+    return [
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.configure" id="apidoc.module.airtable.configure">module airtable.configure</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.configure.configure" id="apidoc.element.airtable.configure.configure">
+        function <span class="apidocSignatureSpan">airtable.</span>configure
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">configure = function (opts) {
+    Airtable.apiKey = opts.apiKey;
+    Airtable.endpointUrl = opts.endpointUrl;
+    Airtable.apiVersion = opts.apiVersion;
+    Airtable.allowUnauthorizedSsl = opts.allowUnauthorizedSsl;
+    Airtable.noRetryIfRateLimited = opts.noRetryIfRateLimited;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  * apiKey - set the token to your secret API token. Visit [your account page](https://airtable.com/account) to create an API token
+.  (`AIRTABLE_API_KEY`)
+  * endpointUrl - the API endpoint to hit. You might want to override
+    it if you are using an API proxy (e.g. runscope.net) to debug your API calls. (`AIRTABLE_ENDPOINT_URL`)
+
+You can set the options globally via Airtable.configure:
+
+    Airtable.<span class="apidocCodeKeywordSpan">configure</span>({ apiKey: 'YOUR_SECRET_API_KEY' })
+
+
+Globally via process env (e.g. in 12factor setup).
+
+    export AIRTABLE_API_KEY=YOUR_SECRET_API_KEY
+
+You can also override the settings per connection:
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.deprecate" id="apidoc.module.airtable.deprecate">module airtable.deprecate</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.deprecate.deprecate" id="apidoc.element.airtable.deprecate.deprecate">
+        function <span class="apidocSignatureSpan">airtable.</span>deprecate
+        <span class="apidocSignatureSpan">(fn, key, message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deprecate(fn, key, message) {
+    return function() {
+        if (!didWarnForDeprecation[key]) {
+            didWarnForDeprecation[key] = true;
+            console.warn(message);
+        }
+        fn.apply(this, arguments);
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.extend" id="apidoc.module.airtable.extend">module airtable.extend</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.extend.extend" id="apidoc.element.airtable.extend.extend">
+        function <span class="apidocSignatureSpan">airtable.</span>extend
+        <span class="apidocSignatureSpan">(prop)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function extender(prop) {
+    var _super = this.prototype;
+
+    // Instantiate a base class (but only create the instance,
+    // don't run the init constructor)
+    initializing = true;
+    var prototype = new this();
+    initializing = false;
+
+    // Copy the properties over onto the new prototype
+    for (var name in prop) {
+        // Check if we're overwriting an existing function
+        prototype[name] = typeof prop[name] == "function" &amp;&amp;
+            typeof _super[name] == "function" &amp;&amp; fnTest.test(prop[name]) ?
+            (function(name, fn){
+                return function() {
+                    var tmp = this._super;
+
+                    // Add a new ._super() method that is the same method
+                    // but on the super-class
+                    this._super = _super[name];
+
+                    // The method only need to be bound temporarily, so we
+                    // remove it when we're done executing
+                    var ret = fn.apply(this, arguments);
+                    this._super = tmp;
+
+                    return ret;
+                };
+            })(name, prop[name]) :
+        prop[name];
+    }
+
+    // The dummy class constructor
+    function Class() {
+        // All construction is actually done in the init method
+        if ( !initializing &amp;&amp; this.init )
+            this.init.apply(this, arguments);
+    }
+
+    // Populate our constructed prototype object
+    Class.prototype = prototype;
+
+    // Enforce the constructor to be what we expect
+    Class.prototype.constructor = Class;
+
+    // And make this class extendable
+    Class.extend = extender;
+
+    return Class;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+
+'use strict';
+
+var Class = require('./class');
+
+var AirtableError = Class.<span class="apidocCodeKeywordSpan">extend</span>({
+init: function(error, message, statusCode) {
+    this.error = error;
+    this.message = message;
+    this.statusCode = statusCode;
+},
+toString: function() {
+    return [
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.gruntfile" id="apidoc.module.airtable.gruntfile">module airtable.gruntfile</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.gruntfile.gruntfile" id="apidoc.element.airtable.gruntfile.gruntfile">
+        function <span class="apidocSignatureSpan">airtable.</span>gruntfile
+        <span class="apidocSignatureSpan">(grunt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">gruntfile = function (grunt) {
+    'use strict';
+
+    // Project configuration.
+    grunt.initConfig({
+        pkg: grunt.file.readJSON('package.json'),
+        jshint: {
+            // define the files to lint
+            files: ['gruntfile.js', 'lib/**/!(class.js)*.js'],
+            // configure JSHint (documented at http://www.jshint.com/docs/)
+            options: {
+                // more options here if you want to override JSHint defaults
+                strict: true,
+                globalstrict: true,
+                globals: {
+                    console: true,
+                    module: true,
+                    require: true,
+                    process: true,
+                    setTimeout: true
+                }
+            }
+        },
+        browserify: {
+            client: {
+                src: './lib/airtable.js',
+                dest: './build/airtable.browser.js',
+                options: {
+                    preBundleCB: function(b) {
+                        b.require('./lib/airtable.js', { expose: 'airtable' });
+                    }
+                }
+            }
+        },
+    });
+
+    // Load the plugin that provides the "uglify" task.
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+
+    // Default task(s).
+    grunt.registerTask('default', ['jshint']);
+
+    grunt.loadNpmTasks('grunt-browserify');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.object_to_query_param_string" id="apidoc.module.airtable.object_to_query_param_string">module airtable.object_to_query_param_string</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.object_to_query_param_string.object_to_query_param_string" id="apidoc.element.airtable.object_to_query_param_string.object_to_query_param_string">
+        function <span class="apidocSignatureSpan">airtable.</span>object_to_query_param_string
+        <span class="apidocSignatureSpan">(obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function objectToQueryParamString(obj) {
+    var parts = [];
+    var addFn = function(key, value) {
+        value = (value === null || value === undefined) ? '' : value;
+        parts.push(encodeURIComponent(key) + '=' + encodeURIComponent(value));
+    };
+
+    _.each(obj, function(value, key) {
+        buildParams(key, value, addFn);
+    });
+
+    return parts.join('&amp;').replace(/%20/g, '+');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.query" id="apidoc.module.airtable.query">module airtable.query</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.query.query" id="apidoc.element.airtable.query.query">
+        function <span class="apidocSignatureSpan">airtable.</span>query
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Class() {
+    // All construction is actually done in the init method
+    if ( !initializing &amp;&amp; this.init )
+        this.init.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.query.extend" id="apidoc.element.airtable.query.extend">
+        function <span class="apidocSignatureSpan">airtable.query.</span>extend
+        <span class="apidocSignatureSpan">(prop)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function extender(prop) {
+    var _super = this.prototype;
+
+    // Instantiate a base class (but only create the instance,
+    // don't run the init constructor)
+    initializing = true;
+    var prototype = new this();
+    initializing = false;
+
+    // Copy the properties over onto the new prototype
+    for (var name in prop) {
+        // Check if we're overwriting an existing function
+        prototype[name] = typeof prop[name] == "function" &amp;&amp;
+            typeof _super[name] == "function" &amp;&amp; fnTest.test(prop[name]) ?
+            (function(name, fn){
+                return function() {
+                    var tmp = this._super;
+
+                    // Add a new ._super() method that is the same method
+                    // but on the super-class
+                    this._super = _super[name];
+
+                    // The method only need to be bound temporarily, so we
+                    // remove it when we're done executing
+                    var ret = fn.apply(this, arguments);
+                    this._super = tmp;
+
+                    return ret;
+                };
+            })(name, prop[name]) :
+        prop[name];
+    }
+
+    // The dummy class constructor
+    function Class() {
+        // All construction is actually done in the init method
+        if ( !initializing &amp;&amp; this.init )
+            this.init.apply(this, arguments);
+    }
+
+    // Populate our constructed prototype object
+    Class.prototype = prototype;
+
+    // Enforce the constructor to be what we expect
+    Class.prototype.constructor = Class;
+
+    // And make this class extendable
+    Class.extend = extender;
+
+    return Class;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+
+'use strict';
+
+var Class = require('./class');
+
+var AirtableError = Class.<span class="apidocCodeKeywordSpan">extend</span>({
+init: function(error, message, statusCode) {
+    this.error = error;
+    this.message = message;
+    this.statusCode = statusCode;
+},
+toString: function() {
+    return [
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.query.validateParams" id="apidoc.element.airtable.query.validateParams">
+        function <span class="apidocSignatureSpan">airtable.query.</span>validateParams
+        <span class="apidocSignatureSpan">(params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function validateParams(params) {
+    assert(_.isPlainObject(params));
+
+    var validParams = {};
+    var ignoredKeys = [];
+    var errors = [];
+    _.each(params, function(value, key) {
+        if (Query.paramValidators.hasOwnProperty(key)) {
+            var validator = Query.paramValidators[key];
+            var validationResult = validator(value);
+            if (validationResult.pass) {
+                validParams[key] = value;
+            } else {
+                errors.push(validationResult.error);
+            }
+        } else {
+            ignoredKeys.push(key);
+        }
+    });
+
+    return {
+        validParams: validParams,
+        ignoredKeys: ignoredKeys,
+        errors: errors,
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.query.prototype" id="apidoc.module.airtable.query.prototype">module airtable.query.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.query.prototype.constructor" id="apidoc.element.airtable.query.prototype.constructor">
+        function <span class="apidocSignatureSpan">airtable.query.prototype.</span>constructor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Class() {
+    // All construction is actually done in the init method
+    if ( !initializing &amp;&amp; this.init )
+        this.init.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.query.prototype.eachPage" id="apidoc.element.airtable.query.prototype.eachPage">
+        function <span class="apidocSignatureSpan">airtable.query.prototype.</span>eachPage
+        <span class="apidocSignatureSpan">(pageCallback, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">eachPage = function (pageCallback, done) {
+    assert(_.isFunction(pageCallback),
+        'The first parameter to `eachPage` must be a function');
+
+    assert(_.isFunction(done) || _.isUndefined(done),
+        'The second parameter to `eachPage` must be a function or undefined');
+
+    var that = this;
+    var path = '/' + this._table._urlEncodedNameOrId();
+    var params = _.clone(this._params);
+
+    var inner = function() {
+        that._table._base.runAction('get', path, params, {}, function(err, response, result) {
+            if (err) {
+                done(err, null);
+            } else {
+                var next;
+                if (result.offset) {
+                    params.offset = result.offset;
+                    next = inner;
+                } else {
+                    next = function() {
+                        if (done) {
+                            done(null);
+                        }
+                    };
+                }
+
+                var records = _.map(result.records, function(recordJson) {
+                    return new Record(that._table, null, recordJson);
+                });
+
+                pageCallback(records, next);
+            }
+        });
+    };
+
+    inner();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * Fetches the first page of results for the query asynchronously,
+ * then calls `done(error, records)`.
+ */
+firstPage: function(done) {
+    assert(_.isFunction(done),
+        'The first parameter to `firstPage` must be a function');
+
+    this.<span class="apidocCodeKeywordSpan">eachPage</span>(function(records, fetchNextPage) {
+        done(null, records);
+    }, function(error) {
+        done(error, null);
+    });
+},
+
+/**
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.query.prototype.firstPage" id="apidoc.element.airtable.query.prototype.firstPage">
+        function <span class="apidocSignatureSpan">airtable.query.prototype.</span>firstPage
+        <span class="apidocSignatureSpan">(done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">firstPage = function (done) {
+    assert(_.isFunction(done),
+        'The first parameter to `firstPage` must be a function');
+
+    this.eachPage(function(records, fetchNextPage) {
+        done(null, records);
+    }, function(error) {
+        done(error, null);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.query.prototype.init" id="apidoc.element.airtable.query.prototype.init">
+        function <span class="apidocSignatureSpan">airtable.query.prototype.</span>init
+        <span class="apidocSignatureSpan">(table, params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function (table, params) {
+    assert(_.isPlainObject(params));
+    _.each(params, function(value, key) {
+        assert(Query.paramValidators[key] &amp;&amp; Query.paramValidators[key](value).pass, 'Invalid parameter for Query: ' + key);
+    });
+
+    this._table = table;
+    this._params = params;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.run_action" id="apidoc.module.airtable.run_action">module airtable.run_action</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.run_action.run_action" id="apidoc.element.airtable.run_action.run_action">
+        function <span class="apidocSignatureSpan">airtable.</span>run_action
+        <span class="apidocSignatureSpan">(base, method, path, queryParams, bodyData, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function runAction(base, method, path, queryParams, bodyData, callback) {
+    var url = base._airtable._endpointUrl + '/v' + base._airtable._apiVersionMajor + '/' + base._id + path + '?' + objectToQueryParamString
+(queryParams);
+
+    request({
+        method: method.toUpperCase(),
+        url: url,
+        body: bodyData,
+        json: true,
+        timeout: base._airtable.requestTimeout,
+        headers: {
+            'authorization': 'Bearer ' + base._airtable._apiKey,
+            'x-api-version': base._airtable._apiVersion,
+            'x-airtable-application-id': base.getId(),
+        },
+        // agentOptions are ignored when running in the browser.
+        agentOptions: {
+            rejectUnauthorized: base._airtable._allowUnauthorizedSsl
+        },
+    }, function(error, resp, body) {
+        if (error) {
+            callback(error, resp, body);
+            return;
+        }
+
+        if (resp.statusCode === 429 &amp;&amp; !base._airtable._noRetryIfRateLimited) {
+            setTimeout(function() {
+                runAction(base, method, path, queryParams, bodyData, callback);
+            }, internalConfig.RETRY_DELAY_IF_RATE_LIMITED);
+            return;
+        }
+
+        error = base._checkStatusForError(resp.statusCode, body);
+        callback(error, resp, body);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.toString" id="apidoc.module.airtable.toString">module airtable.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.toString.toString" id="apidoc.element.airtable.toString.toString">
+        function <span class="apidocSignatureSpan">airtable.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airtable.typecheck" id="apidoc.module.airtable.typecheck">module airtable.typecheck</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.typecheck.typecheck" id="apidoc.element.airtable.typecheck.typecheck">
+        function <span class="apidocSignatureSpan">airtable.</span>typecheck
+        <span class="apidocSignatureSpan">(fn, error)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function check(fn, error) {
+    return function(value) {
+        if (fn(value)) {
+            return {pass: true};
+        } else {
+            return {pass: false, error: error};
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.typecheck.isArrayOf" id="apidoc.element.airtable.typecheck.isArrayOf">
+        function <span class="apidocSignatureSpan">airtable.typecheck.</span>isArrayOf
+        <span class="apidocSignatureSpan">(itemValidator)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isArrayOf = function (itemValidator) {
+    return function(value) {
+        return _.isArray(value) &amp;&amp; _.every(value, itemValidator);
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    inner();
+},
+});
+
+Query.paramValidators = {
+fields:
+    check(check.<span class="apidocCodeKeywordSpan">isArrayOf</span>(_.isString), 'the value for `fields` should be an array
+ of strings'),
+
+filterByFormula:
+    check(_.isString, 'the value for `filterByFormula` should be a string'),
+
+maxRecords:
+    check(_.isNumber, 'the value for `maxRecords` should be a number'),
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airtable.typecheck.isOneOf" id="apidoc.element.airtable.typecheck.isOneOf">
+        function <span class="apidocSignatureSpan">airtable.typecheck.</span>isOneOf
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isOneOf(options) {
+    return _.contains.bind(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
